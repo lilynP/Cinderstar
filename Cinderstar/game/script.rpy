@@ -12,7 +12,7 @@ define n = Character("Narrator")
 
 label start:
 
-    scene bg room
+    scene fondoo
 
     show sseria
 
