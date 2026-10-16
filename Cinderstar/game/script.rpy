@@ -5,7 +5,7 @@
 
 define s = Character("Schell")
 define p = Character("Interviewer")
-define n = Character("Narrator")
+
 
 
 # The game starts here.
@@ -17,6 +17,7 @@ label start:
     show sseria
 
     s "No debiste hacer eso wacho"
+    "Parece como si alguien se molesto con una personita... Intentalo nuevamente mas tarde!"
     
 
     return
