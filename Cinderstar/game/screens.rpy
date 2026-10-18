@@ -5,6 +5,7 @@
 init offset = -1
 
 
+
 ################################################################################
 ## Styles
 ################################################################################
@@ -350,12 +351,23 @@ style navigation_button_text:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
 
+
+define eyesbg = f"images/CreepyEyesbackground.png"
+define eyes2 = f"images/TheCreepyEyes.png"
+define faceFeaturres = f"images/CreepyEyesForeground.png"
+
+default eyes_debug = 0
+
 screen main_menu():
 
     ## This ensures that any other menu screen is replaced.
     tag menu
+    
+    add eyesbg
+    add eyes2 anchor (0.5, 0.5) xpos persistent.eye_center["x"] + mouse["x"] ypos persistent.eye_center["y"] + mouse["y"]
+    add faceFeaturres xalign 1.0
 
-    add gui.main_menu_background
+    
 
     ## This empty frame darkens the main menu.
     frame:
@@ -363,7 +375,7 @@ screen main_menu():
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
-    use navigation
+    
 
     if gui.show_name:
 
@@ -375,6 +387,12 @@ screen main_menu():
 
             text "[config.version]":
                 style "main_menu_version"
+
+    timer 0.01:
+        repeat True
+        action Function(update_image)
+    
+
 
 
 style main_menu_frame is empty
