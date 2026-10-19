@@ -96,6 +96,9 @@ style frame:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#say
 
+
+
+
 screen say(who, what):
 
     window:
@@ -287,8 +290,10 @@ style quick_button_text:
 ##
 ## This screen is included in the main and game menus, and provides navigation
 ## to other menus, and to start the game.
+define audio.hover_sound = "audio/click.wav"
 
 screen navigation():
+    
 
     vbox:
         style_prefix "navigation"
@@ -335,14 +340,26 @@ screen navigation():
 
 
 style navigation_button is gui_button
+
+    
 style navigation_button_text is gui_button_text
+
 
 style navigation_button:
     size_group "navigation"
     properties gui.button_properties("navigation_button")
+    background None
+    xsize 300
+    xfill False
+    padding (0,0)
+    hover_sound "audio/click.wav"
 
 style navigation_button_text:
     properties gui.text_properties("navigation_button")
+    font "fonts/Whimsical.otf"
+    size 60
+    idle_color "#FFFFFF"
+    hover_color "#ED8585"
 
 
 ## Main Menu screen ############################################################
@@ -351,10 +368,9 @@ style navigation_button_text:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
 
-
-define eyesbg = f"images/CreepyEyesbackground.png"
-define eyes2 = f"images/TheCreepyEyes.png"
-define faceFeaturres = f"images/CreepyEyesForeground.png"
+define eyesbg = f"images/eye_background.png"
+define eyes2 = f"images/pupila.png"
+define faceFeaturres = f"images/eye_foreground.png"
 
 default eyes_debug = 0
 
@@ -370,8 +386,7 @@ screen main_menu():
     
 
     ## This empty frame darkens the main menu.
-    frame:
-        style "main_menu_frame"
+   
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
@@ -391,7 +406,9 @@ screen main_menu():
     timer 0.01:
         repeat True
         action Function(update_image)
-    
+
+    use navigation
+
 
 
 

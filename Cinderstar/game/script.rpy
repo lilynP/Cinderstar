@@ -14,10 +14,19 @@ label start:
 
     scene fondoo
 
-    show sseria
+    show spensativa
+    with fade
 
-    s "No debiste hacer eso wacho"
-    "Parece como si alguien se molesto con una personita... Intentalo nuevamente mas tarde!"
+    s "What does 'poggers' mean?"
+
+    hide spensativa
+    show strescuartos
+
+    s "You're scary man, are you even human?"
+
+    "Looks like someone didn't like your comment! Try again later!"
+
+
     
 
     return
