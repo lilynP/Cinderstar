@@ -3,7 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define s = Character("Schell")
+define s = Character("Schell", who_color='ffffff')
 define p = Character("Interviewer")
 
 
@@ -11,6 +11,8 @@ define p = Character("Interviewer")
 # The game starts here.
 
 label start:
+
+    stop music
 
     scene fondoo
 

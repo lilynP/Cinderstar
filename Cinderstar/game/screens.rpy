@@ -293,7 +293,7 @@ style quick_button_text:
 define audio.hover_sound = "audio/click.wav"
 
 screen navigation():
-    
+
 
     vbox:
         style_prefix "navigation"
@@ -341,7 +341,7 @@ screen navigation():
 
 style navigation_button is gui_button
 
-    
+
 style navigation_button_text is gui_button_text
 
 
@@ -359,7 +359,7 @@ style navigation_button_text:
     font "fonts/Whimsical.otf"
     size 60
     idle_color "#FFFFFF"
-    hover_color "#ED8585"
+    hover_color "#85dded"
 
 
 ## Main Menu screen ############################################################
@@ -378,19 +378,19 @@ screen main_menu():
 
     ## This ensures that any other menu screen is replaced.
     tag menu
-    
+
     add eyesbg
     add eyes2 anchor (0.5, 0.5) xpos persistent.eye_center["x"] + mouse["x"] ypos persistent.eye_center["y"] + mouse["y"]
     add faceFeaturres xalign 1.0
 
-    
+
 
     ## This empty frame darkens the main menu.
-   
+
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
-    
+
 
     if gui.show_name:
 
