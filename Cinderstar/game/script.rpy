@@ -4,7 +4,8 @@
 # name of the character.
 
 define s = Character("Schell", who_color='ffffff')
-define p = Character("Interviewer")
+define y = Character("Interviewer")
+define v = Character("Vladan", who_color = 'ffffff')
 
 
 
@@ -13,6 +14,15 @@ define p = Character("Interviewer")
 label start:
 
     stop music
+
+    scene fondo1vladan
+    show vladan1 
+
+    v "CAUSA TE TIENES QUE IR"
+
+    hide vladan1
+
+
 
     scene fondoo
 
