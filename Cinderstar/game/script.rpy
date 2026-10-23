@@ -3,9 +3,9 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define s = Character("Schell", who_color='ffffff')
-define y = Character("Interviewer")
-define v = Character("Vladan", who_color = 'ffffff')
+define s = Character("Schell", who_color='ffffff', window_background = Frame("images/textboxschell.png"))
+define y = Character("You")
+define v = Character("Vladan", who_color = 'ffffff', window_background = Frame("images/barrattextovladan.png"))
 
 
 
