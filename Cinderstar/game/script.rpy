@@ -6,6 +6,7 @@
 define s = Character("Schell", who_color='ffffff', window_background = Frame("images/textboxschell.png"))
 define y = Character("You")
 define v = Character("Vladan", who_color = 'ffffff', window_background = Frame("images/barrattextovladan.png"))
+define n = Character(" ???  ", who_color = 'ffffff', window_background = Frame("images/textboxnarrador.png"))
 
 
 
@@ -36,7 +37,7 @@ label start:
 
     s "You're scary man, are you even human?"
 
-    "Looks like someone didn't like your comment! Try again later!"
+    n "Looks like someone didn't like your comment! Try again later!"
 
 
     
