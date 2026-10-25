@@ -1,12 +1,42 @@
-﻿# The script of the game goes in this file.
+﻿#for the speaking sounds (typewriter)
+init python:
+    import random
+
+    type_sounds = [
+        "audio/typewriter2.mp3", 
+    ]
+
+    def typing_callback(event, interact = True, **kwargs):
+        if not interact:
+            return
+        if event == "show":
+            
+            #adjust dialogue line + cps speed
+            for _ in range(135):
+                renpy.sound.queue(
+                    random.choice(type_sounds),
+                    channel = "sound",
+                    loop = False
+                )
+        
+        elif event in ("slow_done", "end"):
+            #stop any still queued typing sounds when typing finishes or when player clicks to advance 
+            renpy.sound.stop(channel = "sound")
+
+        if event == "end":
+            #optional: play a line finished click to continue sound
+            renpy.sound.play("audio/typewriter1.mp3", channel = "sound")    
+
+
+# The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define s = Character("Schell", who_color='ffffff', window_background = Frame("images/textboxschell.png"))
-define y = Character("You", who_color = 'ffffff', window_background = Frame("images/textboxyou.png"))
-define v = Character("Vladan", who_color = 'ffffff', window_background = Frame("images/barrattextovladan.png"))
-define n = Character(" ??? ", who_color = 'ffffff', window_background = Frame("images/textboxnarrador.png"))
+define s = Character("Schell", who_color='ffffff', window_background = Frame("images/textboxschell.png"), callback = typing_callback)
+define y = Character("You", who_color = 'ffffff', window_background = Frame("images/textboxyou.png"), callback = typing_callback)
+define v = Character("Vladan", who_color = 'ffffff', window_background = Frame("images/barrattextovladan.png"), callback = typing_callback)
+define n = Character(" ??? ", who_color = 'ffffff', window_background = Frame("images/textboxnarrador.png"), callback = typing_callback)
 
 
 
@@ -15,8 +45,9 @@ define n = Character(" ??? ", who_color = 'ffffff', window_background = Frame("i
 label start:
 
     stop music
-
+    
     scene fondo1vladan
+    
     show vladan2
     v "..."
     
@@ -26,6 +57,7 @@ label start:
     hide vladan2
     show vladan3
     v "You woke up"
+    play music "audio/vladaninicioo.mp3"
     hide vladan3
     show vladan2
     v "..."
@@ -55,6 +87,7 @@ label start:
     y "But..."
     v "NO BUTS" with vpunch
     y "SIR I HAVEN'T EVEN FORMED A SINGLE SENTENCE"
+    stop music
     hide vladan1
     show vladan2
     v "Hmmm..."
@@ -74,6 +107,7 @@ label start:
     "You don't get why he said something about being comfortable but you just go with it"
     hide vladan2
     show vladan3
+    
     v "She is the only one we have discovered until now that has origins from here."
     v "Of course she will mix knowledge from here and there"
     hide vladan3
@@ -89,6 +123,7 @@ label start:
     v "Just..."
     v "Don't get discovered, because..."
     v "You can {color=#f00}die{/color}"
+    play music "audio/vladaninicioo.mp3"
     hide vladan3
     show vladan2
     y "WHAT THE HELL?" with vpunch
@@ -108,12 +143,14 @@ label start:
     
     "And you finally close your eyes...{w}Again.{w=1.0}"
 
+    stop music
+
     with fade
     scene fondonegro
 
-    $renpy.pause(1)
-
-
+    $renpy.pause(5)
+    n "You dumbass!!!!!"
+    $renpy.pause(2)
 
     scene fondoo
 
