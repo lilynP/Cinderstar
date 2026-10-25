@@ -48,12 +48,12 @@ label start:
     y "I don't..."
     hide vladan2
     show vladan1
-    v "YOU HAVE TO ENTER THE SPIKEBALL EVEN IF YOU DO NOT WANT IT"
+    v "YOU HAVE TO ENTER THE SPIKEBALL EVEN IF YOU DO NOT WANT IT" with vpunch
     v "YOU HAVE TO BRING US INFORMATION"
     y "Gah!"
     v "YOU UNDERSTAND?"
     y "But..."
-    v "NO BUTS"
+    v "NO BUTS" with vpunch
     y "SIR I HAVEN'T EVEN FORMED A SINGLE SENTENCE"
     hide vladan1
     show vladan2
@@ -88,28 +88,30 @@ label start:
     show vladan3
     v "Just..."
     v "Don't get discovered, because..."
-    v "You can die"
+    v "You can {color=#f00}die{/color}"
     hide vladan3
     show vladan2
-    y "WHAT THE HELL?"
+    y "WHAT THE HELL?" with vpunch
     y "YOU TAKE ME OUT OF MY DUTIES, KNOCK ME OUT AND THEN WHEN I WAKE UP..."
-    y "YOU JUST TELL ME I'M GOING TO DIE...?"
-    y "THIS ISN'T FAI-"
+    y "YOU JUST TELL ME I'M GOING TO {sc=5}DIE...?{/sc}"
+    y "{sc=5}THIS ISN'T FAI-{/sc}{nw=0.3}"
     hide vladan2
     show vladan1
-    v "STOP COMPLAINING"
+    v "STOP COMPLAINING" with vpunch
     v "YOU WERE THE CHOSEN ONE"
     hide vladan1
     show vladan3
     v "Don't you dare disappoint"
-    hide vladan3
+    hide vladan3 with dissolve
     "His voice resonates in your mind like some church bell"
     "Your conciousness starts fading..."
     
-    "And you finally close your eyes...Again."
+    "And you finally close your eyes...{w}Again.{w=1.0}"
 
     with fade
     scene fondonegro
+
+    $renpy.pause(1)
 
 
 
