@@ -148,8 +148,17 @@ label start:
     with fade
     scene fondonegro
 
-    $renpy.pause(5)
-    n "You dumbass!!!!!"
+    $renpy.pause(2)
+    n "Hello :3"
+    n "I think there is something you must know"
+    n "Hi! I'm either your mind or a god! Nice to meet ya!"
+    n "Ok so when talking to the actress, you will sometimes get an answer right out of your mouth without deciding what to say."
+    n "This is me helping you and saving your dumb ahh to not ruin your mission."
+    n "But sometimes..."
+    n "I {b}won't{/b} be there"
+    n "So keep that in mind"
+    n "{b}You have to select the right answer.{/b}"
+    n "Okie dokie :3 Bye bye! and good luck! She's probably complicated so take care! ^^"
     $renpy.pause(2)
 
     scene fondoo
