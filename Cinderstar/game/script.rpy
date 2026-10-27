@@ -174,8 +174,33 @@ label start:
     s "You're scary man, are you even human?"
 
     n "Looks like someone didn't like your comment! Try again later!"
+    show smikan
+    menu: 
+        s "Do you like fluffy horses?"
+        "Yes":
+            play audio "audio/wrong.wav"
+            show smolestadaminimamente
+            s "..."
+            hide smolestaminimamente
+            show smolestaojoabierto with vpunch
+            s "WHAT DO YOU MEAN YOU LIKE THOSE?"
+            hide smolestaojoabierto
+            show smolestaojocerrado
+            s "YOU STINK"
+            hide smolestaojocerrado
+        "No":
+            play audio "audio/correct.wav"
+            show sseria
+            s "..."
+            hide sseria
+            show spensativa
+            s "Not bad for a trash person"
+            hide spensativa
 
+    hide smikan
+    hide strescuartos
 
+    n "What do you think?"
     
 
     return

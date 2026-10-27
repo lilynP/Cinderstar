@@ -212,6 +212,10 @@ screen choice(items):
     style_prefix "choice"
 
     vbox:
+        xalign 0.75
+        yalign 0.55
+        spacing 15
+        
         for i in items:
             textbutton i.caption action i.action
 
@@ -229,9 +233,15 @@ style choice_vbox:
 
 style choice_button is default:
     properties gui.button_properties("choice_button")
+    hover_sound "audio/click.wav"
+    xsize 400
+    ypadding 8
+    xpadding 15
 
 style choice_button_text is default:
     properties gui.text_properties("choice_button")
+    xalign 0.5
+    size 40
 
 
 ## Quick Menu screen ###########################################################
