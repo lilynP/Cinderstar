@@ -163,44 +163,128 @@ label start:
 
     scene fondoo
 
-    show spensativa
+    show sseria
     with fade
 
-    s "What does 'poggers' mean?"
-
-    hide spensativa
-    show strescuartos
-
-    s "You're scary man, are you even human?"
-
-    n "Looks like someone didn't like your comment! Try again later!"
-    show smikan
-    menu: 
-        s "Do you like fluffy horses?"
-        "Yes":
-            play audio "audio/wrong.wav"
-            show smolestadaminimamente
-            s "..."
-            hide smolestaminimamente
-            show smolestaojoabierto with vpunch
-            s "WHAT DO YOU MEAN YOU LIKE THOSE?"
-            hide smolestaojoabierto
-            show smolestaojocerrado
-            s "YOU STINK"
-            hide smolestaojocerrado
-        "No":
-            play audio "audio/correct.wav"
-            show sseria
-            s "..."
+    y "So that's what you went through to reach this?"
+    s "Yes I did, of course"
+    
+    menu:
+        "I understand":
             hide sseria
-            show spensativa
-            s "Not bad for a trash person"
-            hide spensativa
-
-    hide smikan
+            show strescuartos
+            s "Yes you must!"
+            s "You are here to interview me either way"
+        "You still look flawless, you know":
+            hide sseria
+            show strescuartos
+            s "I know that"
     hide strescuartos
+    show sseria
+    y "So...{w}about your dressing room...{w=1.0} Can you talk some more about it?"
+    hide sseria
+    show spensativa
+    
+    jump menupreguntasprincipales
 
-    n "What do you think?"
+    return
+
+label menupreguntasprincipales:
+    menu:
+        
+        s "Well, what do you want to know about it?"
+        "I want to know what you keep inside your drawers":
+            hide strescuartos
+            hide spensativa
+            show snerviosa
+            s "That is, I must say, a creepy question indeed..."
+            menu:
+                "Return and ask something more normal":
+                    call mybad
+                    jump menupreguntasprincipales
+                    
+                "Continue being a creep":
+                    call creep
+        "I want to know about the leg mannequins on the corner.":
+            hide spensativa
+            "En espera"
+            jump menupreguntasprincipales1
+
+
+
+label mybad:
+    y "You know, you're right, my bad"
+    hide smikan
+    hide snerviosa
+    show strescuartos
+    s "Yeah"
+    s "Is it your first time interviewing an actress from my league?"
+    s "You sure are oblivious..."
+    jump menupreguntasprincipales
+    return
     
 
+label creep:
+    y "You think? Because I just feel curiosity towards you and I want to know."
+    $renpy.pause(2)
+    hide snerviosa
+    show smikan
+    s "You think the press will want to know what I keep inside these?"
+    s "By the way, shouldn't you be asking real questions instead of random bullshit?"
+    menu:
+        "JUST TELL ME ALREADY":
+            hide smikan
+            show smolestadaminimamente
+            s "You know damn well that us actresses don't ask for press interview yet you still invade my privacy."
+            menu:
+                "It's just a simple question, why the frown?":
+                    s "..."
+                    s "{sc=5}Really...?{/sc}"
+                    hide smolestadaminimamente
+                    show smolestaojoabierto with vpunch
+                    s "The first question you ask is this and not look at my achievements?"
+                    s "my {sc=5}BEAUTIFUL{/sc} dressing room, {sc=5}BEAUTIFUL{/sc} {b}ME{/b}?"
+                    hide smolestaojoabierto
+                    show smolestaojocerrado with vpunch
+                    s "There are millions of questions you can ask being a professional interviewer..."
+                    s "...yet you only arouse anger and resentment inside me..."
+                    hide smolestaojocerrado
+                    show smolestadaminimamente
+                    s "..."
+                    s "..."
+                    s "You know what,{w} just {b}leave{/b} already{w=1.0}"
+                    s "I hate you."
+                    hide smolestadaminimamente
+                    show smolestaojoabierto with vpunch
+                    s "I HATE YOUR JOB"
+                    s "I HOPE YOU WOULD JUST ROT ALIVE AS A DECOMPOSING CADAVER DOES INSIDE A PIT OF BURNT BOD-{nw=0.3}"
+                    hide smolestaojoabierto
+                    show scouch with hpunch
+                    play sound "audio/cuerdas.mp3"
+                    $renpy.pause(1)
+                    hide scouch
+                    show scararota with dissolve
+                    s "..."
+                    s "..."
+                    s "..."
+                    s "...ouch"
+                    hide scararota
+                    show scararotanerviosa
+                    s "Just {b}GO{/b} now."
+                    s "I don't want to see you."
+                    hide scararotanerviosa
+                    scene fondonegro
+                    play sound "audio/puerta.wav"
+                    n "You already ruined it all."
+                    n "Don't bother going up to him again"
+                    $renpy.full_restart()
+
+                "You know, you're right, my bad":
+                    hide smolestadaminimamente
+                    call mybad
+
+        
+        "You know, you're right, my bad.":
+            call mybad
+            jump menupreguntasprincipales
     return
