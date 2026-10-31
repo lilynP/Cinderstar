@@ -57,7 +57,7 @@ label start:
     hide vladan2
     show vladan3
     v "You woke up"
-    play music "audio/vladaninicioo.mp3"
+    play music "audio/hostil.mp3" volume 2.0
     hide vladan3
     show vladan2
     v "..."
@@ -149,6 +149,7 @@ label start:
     scene fondonegro
 
     $renpy.pause(2)
+    play music "audio/horrormusic.mp3" volume 2.0
     n "Hello :3"
     n "I think there is something you must know"
     n "Hi! I'm either your mind or a god! Nice to meet ya!"
@@ -159,9 +160,12 @@ label start:
     n "So keep that in mind"
     n "{b}You have to select the right answer.{/b}"
     n "Okie dokie :3 Bye bye! and good luck! She's probably complicated so take care! ^^"
+    stop music
     $renpy.pause(2)
 
     scene fondoo
+
+    play music "audio/normalmusic.mp3"
 
     show sseria
     with fade
@@ -194,13 +198,17 @@ label menupreguntasprincipales:
         
         s "Well, what do you want to know about it?"
         "I want to know what you keep inside your drawers":
+            stop music
+            
             hide strescuartos
             hide spensativa
             show snerviosa
+            
             s "That is, I must say, a creepy question indeed..."
             menu:
                 "Return and ask something more normal":
                     call mybad
+                    
                     jump menupreguntasprincipales
                     
                 "Continue being a creep":
@@ -213,6 +221,8 @@ label menupreguntasprincipales:
 
 
 label mybad:
+    stop music
+    play music "audio/normalmusic.mp3"
     y "You know, you're right, my bad"
     hide smikan
     hide snerviosa
@@ -225,19 +235,21 @@ label mybad:
     
 
 label creep:
+    play music "audio/horrormusic.mp3" volume 2.0
     y "You think? Because I just feel curiosity towards you and I want to know."
-    $renpy.pause(2)
     hide snerviosa
     show smikan
     s "You think the press will want to know what I keep inside these?"
     s "By the way, shouldn't you be asking real questions instead of random bullshit?"
     menu:
-        "JUST TELL ME ALREADY":
+        "{sc=5}JUST TELL ME ALREADY{/sc}":
+            play sound "audio/wrong.wav"
             hide smikan
             show smolestadaminimamente
             s "You know damn well that us actresses don't ask for press interview yet you still invade my privacy."
             menu:
-                "It's just a simple question, why the frown?":
+                "{b}It's just a simple question, why the frown?{/b}":
+                    play sound "audio/wrong.wav"
                     s "..."
                     s "{sc=5}Really...?{/sc}"
                     hide smolestadaminimamente
@@ -281,10 +293,13 @@ label creep:
 
                 "You know, you're right, my bad":
                     hide smolestadaminimamente
+                    
                     call mybad
 
         
         "You know, you're right, my bad.":
+            stop music
+            play music "audio/normalmusic.mp3"
             call mybad
             jump menupreguntasprincipales
     return
