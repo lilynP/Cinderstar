@@ -211,3 +211,6 @@ init python:
 ## by a slash.
 
 # define build.itch_project = "renpytom/test-project"
+
+define eyesopen = ImageDissolve("gui/irismask.png", 2.0)
+define eyesclose = ImageDissolve("gui/irismask.png", 2.0, reverse = True)

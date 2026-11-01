@@ -38,7 +38,7 @@ define y = Character("You", who_color = 'ffffff', window_background = Frame("ima
 define v = Character("Vladan", who_color = 'ffffff', window_background = Frame("images/barrattextovladan.png"), callback = typing_callback)
 define n = Character(" ??? ", who_color = 'ffffff', window_background = Frame("images/textboxnarrador.png"), callback = typing_callback)
 
-
+image fuegomovil = Movie(size=(2800,1100), channel = "movie", play = "images/fueguito.webm")
 
 # The game starts here.
 
@@ -46,9 +46,39 @@ label start:
 
     stop music
     
-    scene fondo1vladan
+    play music "audio/schellinicio.mp3"
+
+    scene fuegomovil with dissolve
+    "I could not remember I was alive."
+    "I do not remember how I looked like,"
+    scene fuego3 with fade
+    "and I will never remember who I was by the time I was a nobody."
+    scene foto with fade
+    "I would have never thought how ephemeral my life could be."
+    "If the meaning of the end of my life would be briefed to one of my dad's quotes:"
+    scene fotofuego with fade
+    "'The world ends when we die'"
+    scene cenizas with fade
+    "Or if in reality, I was just a myriad of ashes,"
+    scene manoalzandose with fade
+    "Floating on the firmament of infinity;"
+    "the firmament that looked back at me while my remains of my body were burning to death."
+    scene manocerrandose with fade
+    "That was probably the first time I could enjoy with my hands the star sprinkled sky I longed to reach and touch ever since I was a kid."
+    scene aquamarinespiders with dissolve
+    "Why would I even think some aquamarine spiders would save me from my imminent death?"
+
+    stop music fadeout 2.0
+
+    scene fondonegro with fade
+    $renpy.pause(3)
+
+
+
+    scene fondo1vladan with eyesopen 
+    with dissolve
     
-    show vladan2
+    show vladan2 with fade
     v "..."
     
     y "Mnnnn..."
@@ -142,6 +172,7 @@ label start:
     "Your conciousness starts fading..."
     
     "And you finally close your eyes...{w}Again.{w=1.0}"
+    with eyesclose
 
     stop music
 
