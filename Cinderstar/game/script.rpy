@@ -363,8 +363,12 @@ label menupreguntasprincipales1:
             hide skidding
             show sseria
             y "I see..."
+            jump lightbulb
         "Who is Marcel?":
             hide spensativa
             "en espera wait wait"
 
 
+label lightbulb:
+    hide sseria
+    
