@@ -246,6 +246,7 @@ label menupreguntasprincipales:
                     call creep
         "I want to know about the leg mannequins on the corner.":
             jump menupreguntasprincipales1
+        "I want to know about the clock thing you have on the wall."
 
 
 
@@ -366,9 +367,72 @@ label menupreguntasprincipales1:
             jump lightbulb
         "Who is Marcel?":
             hide spensativa
-            "en espera wait wait"
+            show sjuzgona 
+            s "So you haven't researched enough about me, right?"
+            menu:
+                "I promise I have! I am just forgetful!":
+                    hide sjuzgona
+                    show skidding
+                    s "Are you kidding me? He was literally my closest colleage when acting for 'The lightbulb'."
+                    menu:
+                        "What's 'The lightbulb'?":
+                            hide skidding
+                            show sseria
+                            s "One. of. my. most. famous. plays."
+                            hide sseria
+                            show skidding
+                            s "Are you really an interviewer? Journalist, whatever you are?"
+                            y "I swear I am! I am sorry!"
+                            hide skidding
+                            show strescuartos
+                            s "Just because you say sorry doesn't mean that I have to forgive you."
+                            y "..."
+                            n "Oh?"
+                            show ssonriente
+                            s "Just kidding!"
+                            s "..."
+                            s "..."
+                            s "Haha I'm a real good humorist am I?"
+                            menu:
+                                "Yes. you got me there for a sec.":
+
+                                    jump lightbulb
+                                "...No?":
+                                    hide ssonriente
+                                    show sincomoda
+                                    $renpy.pause(2)
+                                    hide sincomoda
+                                    show sgrin
+                                    jump lightbulb
+                        "OOH I remember now, sorry!":
+                            y "Sorry! I tend to forget things out of nowhere...my apologies...!"
+                            show smikan
+                            s "Oh okay."
+                            s "Then let's keep going"
+                            n "WHY ARE YOU EVEN PLAYING"
+                            n "You know, you just chose the boring path now."
+                            n "The game will be shorter than you expected."
+                            n "And it will probably make zero sense to you now".
+                            n "Your interview will be LAMEEEE ash right now LMAO"
+                            jump menupreguntasprincipales
+                "No, I have not":
+                    hide skidding
+                    show strescuartos
+                    s "It shows."
+                    hide strescuartos
+                    show snerviosa
+                    $renpy.pause(2)
+                    n "That 2 second pause was her being uncomfortable with a presence that is SUPPOSED to make her comfortable with fun questions."
+                    s "So..."
+                    n "She's probably gonna ask something to keep the conversation"
+                    n "I knew you were bad at this, but you are BAD BAD"
+                    jump lightbulb
+
 
 
 label lightbulb:
-    hide sseria
-    
+    "en espera wait wait"
+
+label menupreguntasprincipales2
+    menu: 
+
