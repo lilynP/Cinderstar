@@ -214,8 +214,6 @@ label menupreguntasprincipales:
                 "Continue being a creep":
                     call creep
         "I want to know about the leg mannequins on the corner.":
-            hide spensativa
-            "En espera"
             jump menupreguntasprincipales1
 
 
@@ -303,3 +301,39 @@ label creep:
             call mybad
             jump menupreguntasprincipales
     return
+
+label menupreguntasprincipales1:
+    show soh
+    s "Oh these?"
+    hide soh
+    show spensativa
+    s "They were commissioned by Marcel after we prepared for an audition"
+    menu:
+        "What audition? Tell me about it":
+            hide spensativa
+            show soh
+            s "Oh!"
+            s "You remember 'Stockings more like gloves' right?"
+            hide soh
+            show spensativa
+            s "I wasn't the main actress because of my physique and the director wanted someone way more..."
+            hide spensativa
+            show skidding
+            s "Different? but capable"
+            hide skidding
+            show sseria
+            y "Weren't you ashamed of yourself because of that?"
+            s "About what?"
+            s "The fact that they didn't let me be the main actress?"
+            y "Yeah, don't have the need to be the main actress at all times?"
+            show skidding
+            s "Oh no! Not really!"
+            s "I mean I like to be the image of the play but it can become tiring you know?"
+            hide skidding
+            show sseria
+            y "I see..."
+        "Who is Marcel?":
+            hide spensativa
+            "en espera wait wait"
+
+
