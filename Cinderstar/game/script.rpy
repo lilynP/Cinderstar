@@ -1,4 +1,9 @@
-﻿#for the speaking sounds (typewriter)
+﻿#for the faded or non hovered secret or hidden option for the dialogues
+default reloj_desbloqueado = False
+#for avoiding asking the same question all over again
+default maniquies = False
+
+#for the speaking sounds (typewriter)
 init python:
     import random
 
@@ -225,29 +230,31 @@ label start:
     return
 
 label menupreguntasprincipales:
-    menu:
-        
-        s "Well, what do you want to know about it?"
-        "I want to know what you keep inside your drawers":
-            stop music
-            
-            hide strescuartos
-            hide spensativa
-            show snerviosa
-            
-            s "That is, I must say, a creepy question indeed..."
-            menu:
-                "Return and ask something more normal":
-                    call mybad
-                    
-                    jump menupreguntasprincipales
-                    
-                "Continue being a creep":
-                    call creep
-        "I want to know about the leg mannequins on the corner.":
-            jump menupreguntasprincipales1
-        "I want to know about the clock thing you have on the wall."
+    hide sseria
+    hide strescuartos
+    hide smikan
+    show spensativa
+    s "Well, what do you want to know about it?"
 
+    call screen menu_reloj
+
+
+label drawers:
+    stop music
+            
+    hide strescuartos
+    hide spensativa
+    show snerviosa
+            
+    s "That is, I must say, a creepy question indeed..."
+    menu:
+        "Return and ask something more normal":
+            call mybad
+                    
+            jump menupreguntasprincipales
+                    
+        "Continue being a creep":
+            call creep
 
 
 label mybad:
@@ -388,6 +395,7 @@ label menupreguntasprincipales1:
                             s "Just because you say sorry doesn't mean that I have to forgive you."
                             y "..."
                             n "Oh?"
+                            hide strescuartos
                             show ssonriente
                             s "Just kidding!"
                             s "..."
@@ -399,24 +407,29 @@ label menupreguntasprincipales1:
                                     jump lightbulb
                                 "...No?":
                                     hide ssonriente
-                                    show sincomoda
+                                    show snerviosa
                                     $renpy.pause(2)
-                                    hide sincomoda
-                                    show sgrin
                                     jump lightbulb
                         "OOH I remember now, sorry!":
                             y "Sorry! I tend to forget things out of nowhere...my apologies...!"
+                            hide skidding
                             show smikan
                             s "Oh okay."
                             s "Then let's keep going"
-                            n "WHY ARE YOU EVEN PLAYING"
+                            $renpy.pause(2)
+                            stop music
+                            play music "audio/horrormusic.mp3"
+                            n "WHY ARE YOU EVEN PLAYING" with vpunch
                             n "You know, you just chose the boring path now."
                             n "The game will be shorter than you expected."
-                            n "And it will probably make zero sense to you now".
-                            n "Your interview will be LAMEEEE ash right now LMAO"
+                            n "And it will probably make zero sense to you now."
+                            n "Your interview will be LAMEEEE as hell right now LMAO"
+                            stop music
+                            play music "audio/normalmusic.mp3"
+                            $reloj_desbloqueado = True
                             jump menupreguntasprincipales
                 "No, I have not":
-                    hide skidding
+                    hide sjuzgona
                     show strescuartos
                     s "It shows."
                     hide strescuartos
@@ -431,8 +444,34 @@ label menupreguntasprincipales1:
 
 
 label lightbulb:
-    "en espera wait wait"
+    
 
-label menupreguntasprincipales2
-    menu: 
+    "en espera wait wait 2"
+
+
+
+    $reloj_desbloqueado = True
+    jump menupreguntasprincipales
+
+label relojenlapared:
+    "en espera wait wait 1"
+    return
+
+label maniquies:
+    if maniquies:
+        hide spensativa
+        show snerviosa
+        s "Wait...didn't you already ask me about those?"
+        hide snerviosa
+        show skidding
+        s "Are you even paying attention to our conversation"
+        y "I...uh..."
+        hide skidding
+        show strescuartos
+        s "Move on already."
+        hide strescuartos
+        jump menupreguntasprincipales
+    else:
+        $maniquies = True
+        jump menupreguntasprincipales1
 

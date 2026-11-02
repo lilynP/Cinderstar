@@ -1664,3 +1664,24 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+
+screen menu_reloj():
+    vbox:
+        style_prefix "choice"
+        xalign 0.75
+        ypos 540
+        yanchor 0.5
+        spacing 15
+
+        textbutton "I want to know what you keep inside your drawers" action Jump("drawers")
+        textbutton "I want to know about the leg mannequins on the corner." action Jump("maniquies")
+
+        if reloj_desbloqueado:
+            textbutton "I want to know about the clock thing you have on the wall." action Jump("relojenlapared")
+        else:
+            textbutton "I want to know about the clock think you have on the wall.":
+                action NullAction()
+                text_color "#808080"
+                text_hover_color "#808080"
+                background None
