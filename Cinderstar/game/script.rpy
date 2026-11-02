@@ -342,6 +342,7 @@ label creep:
     return
 
 label menupreguntasprincipales1:
+    hide spensativa
     show soh
     s "Oh these?"
     hide soh
@@ -365,6 +366,7 @@ label menupreguntasprincipales1:
             s "About what?"
             s "The fact that they didn't let me be the main actress?"
             y "Yeah, don't have the need to be the main actress at all times?"
+            hide sseria
             show skidding
             s "Oh no! Not really!"
             s "I mean I like to be the image of the play but it can become tiring you know?"
@@ -418,7 +420,7 @@ label menupreguntasprincipales1:
                             s "Then let's keep going"
                             $renpy.pause(2)
                             stop music
-                            play music "audio/horrormusic.mp3"
+                            play music "audio/horrormusic.mp3" volume 2.0
                             n "WHY ARE YOU EVEN PLAYING" with vpunch
                             n "You know, you just chose the boring path now."
                             n "The game will be shorter than you expected."
@@ -446,12 +448,104 @@ label menupreguntasprincipales1:
 label lightbulb:
     
     hide snerviosa
-    "en espera wait wait 2"
+    hide sseria
+    show ssonriente
+    s "Anyways, do you want me to demonstrate you a bit of 'The lightbulb'?"
+    menu:
+        "Yes sure! Tell me about it.":
+            jump lightbulbdemos
+        "...Ok?":
+            hide ssonriente
+            show strescuartos
+            s "What do you mean '...Ok?' I will tell you about it anyways."
+            jump lightbulbdemos
+
+
+label lightbulbdemos:
+    hide ssonriente
+    hide strescuartos
+    show skidding
+    s "Ok so the drill rings, right?"
+    hide skidding
+    show sgrin
+    s "The play is about to start, and Marcel and I appear together."
+    s "The set is a half empty house with a clock on the wall, that doesn't tick by the way,"
+    s "a table on the center of the set, a lightbulb hanging on the table, that ALSO doesn't work,"
+    s "a door drawn with a crayon, and a chair, just there."
+    hide sgrin
+    show ssonriente
+    s "I go, and from the lines I remember I exclaim 'It's empty'."
+    hide ssonriente
+    show sdisgusto
+    s "then, Marcel, well, Marcel with that stupid role of a stupid man, comes to me walking backwards like some beep boop robot, and asks me:"
+    hide sdisgusto
+    show sexplicando1
+    s "'The cup?' so I yell at him saying:"
+    hide sexplicando1
+    show smolestaojoabierto with vpunch
+    s "'NO, NOT THE CUP!! MY SOUL! IT'S EMPTY! HAVEN'T YOU REALIZED AFTER ALL THESE YEARS?!"
+    hide smolestaojoabierto 
+    show sbrazoscruzados
+    s "But yes, also the cup'"
+    hide sbrazoscruzados
+    show ssonriente
+    menu:
+        s "It's so funny isn't it? The punchline."
+        "I don't think that was funny at all...":
+            hide ssonriente
+            stop music
+            
+            show sjuzgona
+            s "Huh? Why?"
+            y "You know, the Marcel guy entering the scene, and everything...It's absurd..."
+            hide sjuzgona
+            show sdisgusto
+            s "Oh heavens..."
+            hide sdisgusto
+            show skidding
+            s "Do you forget where you are?"
+            s "You must be a big fleshy deal!"
+            menu:
+                "Hey that's enough uhhh let's just stick to the first question, ok?":
+                    hide skidding
+                    show sseria
+                    y "So umm..."
+                    hide sseria
+                    play music "audio/normalmusic.mp3"
+                    $reloj_desbloqueado = True
+                    jump menupreguntasprincipales
+                "I kinda am.":
+                    hide skidding
+                    show sbrazoscruzados
+                    play sound "audio/wrong.wav"
+                    s "What did you say?"
+                    y "Nah, nothing."
+                    s "..."
+                    s "..."
+                    hide sbrazoscruzados
+                    play music "audio/normalmusic.mp3"
+                    $reloj_desbloqueado = True
+                    jump menupreguntasprincipales
+        "Mmhmm!":
+            play sound "audio/correct.wav" volume 0.5
+            hide ssonriente
+            show sexplicando1
+            s "Yeah! So I keep reproaching him because he makes dumb comments and yadda yadda"
+            hide sexplicando1
+            show skidding
+            s "I tell him he has 'filled up' my life with forgetfullness, and I just can't drink it you know?"
+            hide skidding
+            show sexplicando1
+            s "He asks 'What do you want me to do to fix it?' and I break into tears, yelling:"
+            ###NO OLVIDAR###
+            #aqui tiene que haber un sprite de schell como llorando actoralmente, puede ser o una escena o un sprite
+            # "Nothing, haven't you realized the light above us doesn't work anymore? It consumes energy!! Our soul!!
+            #It turns life into a lightless realm. Just look at me...Do you see me as the person you met 10 years ago at the cafe?"
 
 
 
-    $reloj_desbloqueado = True
-    jump menupreguntasprincipales
+
+
 
 label relojenlapared:
     "en espera wait wait 1"
