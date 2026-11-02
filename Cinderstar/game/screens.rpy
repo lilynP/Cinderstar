@@ -1680,7 +1680,7 @@ screen menu_reloj():
         if reloj_desbloqueado:
             textbutton "I want to know about the clock thing you have on the wall." action Jump("relojenlapared")
         else:
-            textbutton "I want to know about the clock think you have on the wall.":
+            textbutton "I want to know about the clock thing you have on the wall.":
                 action NullAction()
                 text_color "#808080"
                 text_hover_color "#808080"

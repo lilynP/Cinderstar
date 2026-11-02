@@ -445,7 +445,7 @@ label menupreguntasprincipales1:
 
 label lightbulb:
     
-
+    hide snerviosa
     "en espera wait wait 2"
 
 
