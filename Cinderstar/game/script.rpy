@@ -92,7 +92,7 @@ label start:
     hide vladan2
     show vladan3
     v "You woke up"
-    play music "audio/hostil.mp3" volume 2.0
+    play music "audio/hostil.mp3" volume 3.0
     hide vladan3
     show vladan2
     v "..."
@@ -158,7 +158,7 @@ label start:
     v "Just..."
     v "Don't get discovered, because..."
     v "You can {color=#f00}die{/color}"
-    play music "audio/vladaninicioo.mp3"
+    play music "audio/vladaninicioo.mp3" volume 2.0
     hide vladan3
     show vladan2
     y "WHAT THE HELL?" with vpunch
@@ -363,10 +363,12 @@ label menupreguntasprincipales1:
             hide skidding
             show sseria
             y "Weren't you ashamed of yourself because of that?"
+            hide sseria
+            show spensativa
             s "About what?"
             s "The fact that they didn't let me be the main actress?"
             y "Yeah, don't have the need to be the main actress at all times?"
-            hide sseria
+            hide spensativa
             show skidding
             s "Oh no! Not really!"
             s "I mean I like to be the image of the play but it can become tiring you know?"
@@ -537,10 +539,15 @@ label lightbulbdemos:
             hide skidding
             show sexplicando1
             s "He asks 'What do you want me to do to fix it?' and I break into tears, yelling:"
+            hide sexplicando1
             ###NO OLVIDAR###
             #aqui tiene que haber un sprite de schell como llorando actoralmente, puede ser o una escena o un sprite
             # "Nothing, haven't you realized the light above us doesn't work anymore? It consumes energy!! Our soul!!
             #It turns life into a lightless realm. Just look at me...Do you see me as the person you met 10 years ago at the cafe?"
+
+
+            $reloj_desbloqueado = True
+            jump menupreguntasprincipales
 
 
 
@@ -558,7 +565,7 @@ label maniquies:
         s "Wait...didn't you already ask me about those?"
         hide snerviosa
         show skidding
-        s "Are you even paying attention to our conversation"
+        s "Are you even paying attention to our conversation?"
         y "I...uh..."
         hide skidding
         show strescuartos
