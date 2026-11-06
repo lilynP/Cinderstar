@@ -280,13 +280,13 @@ label creep:
     s "By the way, shouldn't you be asking real questions instead of random bullshit?"
     menu:
         "{sc=5}JUST TELL ME ALREADY{/sc}":
-            play sound "audio/wrong.wav"
+            play sound "audio/wrong.mp3"
             hide smikan
             show smolestadaminimamente
             s "You know damn well that us actresses don't ask for press interview yet you still invade my privacy."
             menu:
                 "{b}It's just a simple question, why the frown?{/b}":
-                    play sound "audio/wrong.wav"
+                    play sound "audio/wrong.mp3"
                     s "..."
                     s "{sc=5}Really...?{/sc}"
                     hide smolestadaminimamente
@@ -519,7 +519,7 @@ label lightbulbdemos:
                 "I kinda am.":
                     hide skidding
                     show sbrazoscruzados
-                    play sound "audio/wrong.wav"
+                    play sound "audio/wrong.mp3"
                     s "What did you say?"
                     y "Nah, nothing."
                     s "..."
@@ -540,10 +540,288 @@ label lightbulbdemos:
             show sexplicando1
             s "He asks 'What do you want me to do to fix it?' and I break into tears, yelling:"
             hide sexplicando1
-            ###NO OLVIDAR###
-            #aqui tiene que haber un sprite de schell como llorando actoralmente, puede ser o una escena o un sprite
-            # "Nothing, haven't you realized the light above us doesn't work anymore? It consumes energy!! Our soul!!
-            #It turns life into a lightless realm. Just look at me...Do you see me as the person you met 10 years ago at the cafe?"
+            scene escena1
+            s "'Nothing.'"
+            s "'Haven't you realized the light above us doesn't work anymore?'"
+            s "'It consumes energy!! Our soul!! It turns life into a lightless realm.'"
+            s "'Just look at me...'"
+            s "'Do you see me as the person you met 10 years ago at the cafe?'"
+        
+            menu:
+                "So...what you just mentioned...'The light above us doesn't work anymore' Has it happened to you before?":
+                    y "I mean, feeling 'lightless' after a play or..."
+                    y "Something that consumes you without you having the possibility to do something about it?"
+                    scene fondoo
+                    show sexplicando1
+                    s "Probably...Back when I was still a small actress and everything was so consuming!"
+                    s "I still remember when I couldn't remember the scripts as fast as I remember them nowadays..."
+                    hide sexplicando1
+                    show sseria
+                    y "What was the hardest script you have ever been given?"
+                    hide sseria
+                    show skidding
+                    s "So here at Concordia we have many directors you know?"
+                    hide skidding
+                    show smikan
+                    s "But the problem here is that the scripts are weird, but dream like {sc=5} WEIRD {/sc}"
+                    s "You ever dreamed you were a woman daubed in squid oil, running around the city, screaming and nobody turning to look at you?"
+                    s "But everything is screamed in a language you have never heard of but you know for some reason?"
+                    hide smikan
+                    show sbrazoscruzados
+                    s "Yeah, that level of weird."
+                    s "The 'I can't control this' level of weird."
+                    hide sbrazoscruzados
+                    show sgrin
+                    y "I have never heard of that kind of dreams before, but they do sound interesting!"
+                    s "So, the scripts work some way the same as a dream, but just the scripts from Mr Menschsein as far I have seen."
+                    hide sgrin
+                    show ssonriente
+                    s "Quite ironic though."
+                    y "Didn't Menschsein mean 'being human' in german? Sorry to interrupt..."
+                    hide ssonriente
+                    show spensativa
+                    s "Yes, but it is a language I haven't heard in so much time, because here at Concordia not many use it."
+                    menu: 
+                        "Yeah, haven't heard of it around here either...Just in books from the library...":
+                            hide spensativa
+                            show soh
+                            s "Yes, me too..."
+                            hide soh
+                            show sgrin
+                            y "Do you often head to the library?"
+                            hide sgrin
+                            show ssonriente
+                            play sound "audio/correct.wav" volume 0.5
+                            s "Yes I do! I try to look for some some books about biology or some mythical facts!"
+                            s "They are fun to read in the meantime and help me concentrate better."
+                            y "How do you concentrate better"
+                            hide ssonriente
+                            show sgrin
+                            s "You know, haven't you ever read a book and thought...'Wow! I feel much clearer now!'?"
+                            y "Probably, why?"
+                            hide sgrin
+                            show spensativa
+                            s "That's probably what I felt."
+                            s "Did you know some witches are depicted with a reversed broom?"
+                            hide spensativa
+                            show sexplicando1
+                            s "It's awesome how some books lie to us..."
+                            y "Yeah haha..."
+                            $reloj_desbloqueado = True
+                            jump menupreguntasprincipales
+                        "But it is a well known language in planet Earth...!":
+                            play sound "audio/wrong.mp3"
+                            hide spensativa
+                            show sbrazoscruzados
+                            s "Sorry, what?"
+                            menu: 
+                                "Oh nothing":
+                                    s "Hmmm..."
+                                "It's just that I knew before she brought me here":
+                                    s "'She'?"
+                            "She's already suspicious of you, just say 'nothing'"
+                            y "Yep, nothing! So what scripts did you want to mention?"
+                            y "Sorry, we took a little detour didn't we?"
+                            hide sbrazoscruzados
+                            show sincomoda
+                            s "Yeah we did haha..."
+                            hide sincomoda
+                            show spensativa
+                            s "So I might say there were three scripts that really caught me off guard..."
+                            y "What were they?"
+
+                            "EN ESPERA"
+                            #Poner una escena de schell asustada al ver sus scripts
+                            #To be continued
+                            #NO OLVIDAR
+
+
+                "So what you are telling me until now is that 'The lightbulb's concept is forgetfullness and the fallout of love between a couple, right?":
+                    scene fondoo
+                    show ssonriente
+                    s "Yes! You got it!"
+                    y "Hmmm"
+                    y "So why is its name 'The lightbulb'?"
+                    hide ssonriente
+                    show sgrin
+                    s "Oh that's because you haven't heard the ending yet..."
+                    s "So Marcel just says 'I am looking at you..."
+                    hide sgrin
+                    show sexplicando1
+                    s "And I just follow him you know?"
+                    hide sexplicando1
+                    show sdisgusto
+                    s "And he says, 'And...You have an eyelash on you cheek'"
+                    hide sdisgusto
+                    show smolestaojoabierto with vpunch
+                    s "SO I JUST CRASH OUT YOU KNOW?"
+                    hide smolestaojoabierto
+                    show sdisgusto
+                    s "I yell at him again saying that I don't even have eyelashes, that these are drawn..."
+                    menu:
+                        "Wait, you don't have eyelashes?":
+                            s "Sigh."
+                            play sound "audio/wrong.mp3"
+                            y "Sorry if that uncomfortable! My apologies..."
+                            s "It's not that...It's just..."
+                            s "It makes me remember that I am nothing without..."
+                            s "All this."
+                            hide sdisgusto
+                            show sincomoda
+                            y "What do you mean 'nothing'?"
+                            hide sincomoda
+                            show snerviosa
+                            s "It's complicated, but you don't have to worry about it!"
+                            hide snerviosa
+                            show sincomoda
+                            y "So, what's the background?"
+                            s "So, you know, haha..."
+                            s "This isn't my real body!"
+                            hide sincomoda
+                            show snerviosa
+                            s "Everything you see was tailored and sewn to my size."
+                            y "So you have had surgery?" with vpunch
+                            play sound "audio/wrong.mp3"
+                            s "Kind of."
+                            hide snerviosa
+                            show sincomoda
+                            s "Next question please..."
+                            hide sincomoda
+
+                            
+
+
+                        "That was another of you punchlines right? Sorry, just keep going...":
+                            hide sdisgusto
+                            play sound "audio/correct.wav" volume 0.5
+                            show sexplicando1
+                            s "Yes."
+                            s "Then we start to question the one who wrote us and the scenere around us."
+                            s "Like the broken lightbulb! And I just yell that I feel judged, by everything around us."
+                            hide sexplicando1
+                            show sgrin
+                            s "After all that, Marcel just says 'I forgot my lines'."
+                            hide sgrin
+                            show ssonriente
+                            s "It was so funny!"
+                            s "I thought that was an improvisation but that was actually on the script!"
+                            hide ssonriente
+                            show skidding
+                            s "We are supposed to be absurd but not forgetful you know?"
+                            hide skidding
+                            show ssonriente
+                            s "So I just replied with my famous line:"
+                            s "'You never had anything to say.'"
+                            menu: 
+                                "Is that supposed to be famous?":
+                                    play sound "audio/wrong.mp3"
+                                    stop music
+                                    hide ssonriente
+                                    show skidding
+                                    s "Huh? Of course?"
+                                    hide skidding
+                                    show sseria
+                                    s "It's peak comedy here at Concordia."
+                                    hide sseria
+                                    show skidding
+                                    s "Are you telling me you are some kind of meathead?"
+                                    menu:
+                                        "{sc=5}What even is Concordia?{/sc}":
+                                            play sound "audio/wrong.mp3"
+                                            play music "audio/horrormusic.mp3"
+                                            hide skidding
+                                            show sseria
+                                            s "So you are not from here?"
+                                            y "W-wait! I can explain! I just have bad memory you know?"
+                                            s "No..."
+                                            hide sseria
+                                            show smolestadaminimamente
+                                            s "That's not just 'bad memory' if you live somewhere, you must know the name of the place you are living in right?"
+                                            s "AT LEAST the planet you live in."
+                                            s "If you are not from here you must know this place by the name 'Spikeball', right?"
+                                            hide smolestadaminimamente
+                                            show sjuzgona
+                                            s "And you must be a filthy spook, a bloody backstabbing fraud."
+                                            y "I swear! I am not a spy! You have to believe me!"
+                                            s "I don't think that's true huh."
+                                            s "Just look at your hands, they are sweating."
+                                            hide sjuzgona
+                                            show sdisgusto
+                                            s "Ugh, I hate bad liars"
+                                            s "And by the way, I never said the word 'spy'"
+                                            s "You just feel inside your own trap"
+                                            y "I am not-!" with vpunch
+                                            #ESCENA DE LA REINA 
+                                            #NO OLVIDAR
+                                            $renpy.full_restart()
+
+
+                                        "I'm just kidding with you ma'am, it's just, you know? I am a little different.":
+                                            #FALTA SPRITE COMO VLADAN MOLESTO PERO CON SCHELL SERIA
+                                            hide skidding
+                                            show svladan
+                                            s "Why are you different?"
+                                            s "Do you happen to have had a sad backstory?"
+                                            s "A malformation from birth?"
+                                            s "A superpower?"
+                                            s "A talent better than anyone else here at the theatre?"
+                                            s "A talent better than mine?"
+                                            s "A disability?"
+                                            s "Why?"
+                                            s "{sc=5}Why are you different?{/sc}"
+                                            s "Huh."
+                                            s "Or perhaps..."
+                                            s "Are you a traveler from the other ground?"
+                                            n "You don't have to answer her."
+                                            n "Everyone is different in their own way!! <3"
+                                            n "Don't listen to her."
+                                            n "Here, answer her this:"
+                                            y "My apologies I tried to get into your life, but this feels way too personal. Can I ask you other questions?"
+                                            hide svladan
+                                            show sjuzgona
+                                            s "Fuah, sure."
+                                            hide sjuzgona
+                                            $reloj_desbloqueado = True
+                                            jump menupreguntasprincipales
+
+                                "Ohh, now I can see where you are going":
+                                    s "As you may"
+                                    hide ssonriente
+                                    #se le rompe la cara
+                                    show scouch with hpunch
+                                    play sound "audio/cuerdas.mp3"
+                                    $renpy.pause(1)
+                                    hide scouch
+                                    show scararota with dissolve
+                                    s "..."
+                                    s "..."
+                                    s "..."
+                                    s "...ouch"
+                                    hide scararota
+                                    show scararotanerviosa
+                                    $renpy.pause(1)
+                                    hide scararotanerviosa
+                                    scene fondonegro
+                                    play sound "audio/coser.mp3"
+                                    scene fondoo
+                                    show sincomoda
+                                    s "Sorry, this must have been kind of annoying."
+                                    y "Not really."
+                                    y "It's just a part of you and it's amazing to see the other faces of people."
+                                    hide sincomoda
+                                    show sgrin
+                                    play sound "audio/correct.wav" volume 0.5
+                                    s "That sound beautiful"
+                                    y "Mhm!...So...Keeping up with the stuff in your dressing room..."
+                                    $reloj_desbloqueado = True
+                                    jump menupreguntasprincipales
+
+                                    
+
+
+
+
+
 
 
             $reloj_desbloqueado = True
