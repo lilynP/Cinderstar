@@ -32,6 +32,20 @@ init python:
             #optional: play a line finished click to continue sound
             renpy.sound.play("audio/typewriter1.mp3", channel = "sound")    
 
+#for the trembling movement
+
+transform constant_shake:
+    subpixel True
+    # Randomizes the offset slightly every 0.05 seconds
+    choice:
+        linear 0.05 xoffset 5 yoffset -5
+    choice:
+        linear 0.05 xoffset -5 yoffset 5
+    choice:
+        linear 0.05 xoffset -3 yoffset -3
+    choice:
+        linear 0.05 xoffset 5 yoffset 3
+    repeat
 
 # The script of the game goes in this file.
 
@@ -479,7 +493,7 @@ label lightbulbdemos:
     s "I go, and from the lines I remember I exclaim 'It's empty'."
     hide ssonriente
     show sdisgusto
-    s "then, Marcel, well, Marcel with that stupid role of a stupid man, comes to me walking backwards like some beep boop robot, and asks me:"
+    s "then, Marcel, well, Marcel with that {b}stupid{/b} role of a {b}stupid{/b} man, comes to me walking backwards like some beeping robot, and asks me:"
     hide sdisgusto
     show sexplicando1
     s "'The cup?' so I yell at him saying:"
@@ -594,7 +608,7 @@ label lightbulbdemos:
                             play sound "audio/correct.wav" volume 0.5
                             s "Yes I do! I try to look for some some books about biology or some mythical facts!"
                             s "They are fun to read in the meantime and help me concentrate better."
-                            y "How do you concentrate better"
+                            y "How do you concentrate better?"
                             hide ssonriente
                             show sgrin
                             s "You know, haven't you ever read a book and thought...'Wow! I feel much clearer now!'?"
@@ -607,6 +621,7 @@ label lightbulbdemos:
                             show sexplicando1
                             s "It's awesome how some books lie to us..."
                             y "Yeah haha..."
+                            hide sexplicando
                             $reloj_desbloqueado = True
                             jump menupreguntasprincipales
                         "But it is a well known language in planet Earth...!":
@@ -663,9 +678,12 @@ label lightbulbdemos:
                             s "Sigh."
                             play sound "audio/wrong.mp3"
                             y "Sorry if that uncomfortable! My apologies..."
+                            stop music fadeout 2.0
+                            
                             s "It's not that...It's just..."
                             s "It makes me remember that I am nothing without..."
                             s "All this."
+                            play music "audio/normalmusic2.mp3"
                             hide sdisgusto
                             show sincomoda
                             y "What do you mean 'nothing'?"
@@ -680,13 +698,18 @@ label lightbulbdemos:
                             hide sincomoda
                             show snerviosa
                             s "Everything you see was tailored and sewn to my size."
-                            y "So you have had surgery?" with vpunch
                             play sound "audio/wrong.mp3"
+                            y "So you have had surgery?" with vpunch
+                            
                             s "Kind of."
                             hide snerviosa
                             show sincomoda
                             s "Next question please..."
                             hide sincomoda
+                            stop music fadeout 2.0
+                            play music "audio/normalmusic.mp3" fadein 2.0
+                            $reloj_desbloqueado = True
+                            jump menupreguntasprincipales
 
                             
 
@@ -696,7 +719,7 @@ label lightbulbdemos:
                             play sound "audio/correct.wav" volume 0.5
                             show sexplicando1
                             s "Yes."
-                            s "Then we start to question the one who wrote us and the scenere around us."
+                            s "Then we start to question the one who wrote us and the scene around us."
                             s "Like the broken lightbulb! And I just yell that I feel judged, by everything around us."
                             hide sexplicando1
                             show sgrin
@@ -728,14 +751,14 @@ label lightbulbdemos:
                                     menu:
                                         "{sc=5}What even is Concordia?{/sc}":
                                             play sound "audio/wrong.mp3"
-                                            play music "audio/horrormusic.mp3"
+                                            play music "audio/horrormusic.mp3" volume 2.0
                                             hide skidding
-                                            show sseria
+                                            show sseria at center, constant_shake
                                             s "So you are not from here?"
                                             y "W-wait! I can explain! I just have bad memory you know?"
                                             s "No..."
                                             hide sseria
-                                            show smolestadaminimamente
+                                            show smolestadaminimamente at center, constant_shake
                                             s "That's not just 'bad memory' if you live somewhere, you must know the name of the place you are living in right?"
                                             s "AT LEAST the planet you live in."
                                             s "If you are not from here you must know this place by the name 'Spikeball', right?"
@@ -749,7 +772,7 @@ label lightbulbdemos:
                                             show sdisgusto
                                             s "Ugh, I hate bad liars"
                                             s "And by the way, I never said the word 'spy'"
-                                            s "You just feel inside your own trap"
+                                            s "You just fell inside your own trap"
                                             y "I am not-!" with vpunch
                                             #ESCENA DE LA REINA 
                                             #NO OLVIDAR
@@ -760,6 +783,7 @@ label lightbulbdemos:
                                             #FALTA SPRITE COMO VLADAN MOLESTO PERO CON SCHELL SERIA
                                             hide skidding
                                             show svladan
+                                            play music "audio/horrormusic.mp3" volume 2.0
                                             s "Why are you different?"
                                             s "Do you happen to have had a sad backstory?"
                                             s "A malformation from birth?"
@@ -781,6 +805,8 @@ label lightbulbdemos:
                                             show sjuzgona
                                             s "Fuah, sure."
                                             hide sjuzgona
+                                            stop music
+                                            play music "audio/normalmusic.mp3"
                                             $reloj_desbloqueado = True
                                             jump menupreguntasprincipales
 
@@ -788,6 +814,8 @@ label lightbulbdemos:
                                     s "As you may"
                                     hide ssonriente
                                     #se le rompe la cara
+                                    stop music fadeout 2.0
+                                    play music "audio/normalmusic2.mp3" fadein 1.0
                                     show scouch with hpunch
                                     play sound "audio/cuerdas.mp3"
                                     $renpy.pause(1)
@@ -803,16 +831,19 @@ label lightbulbdemos:
                                     hide scararotanerviosa
                                     scene fondonegro
                                     play sound "audio/coser.mp3"
+                                    $renpy.pause(2)
                                     scene fondoo
                                     show sincomoda
                                     s "Sorry, this must have been kind of annoying."
                                     y "Not really."
                                     y "It's just a part of you and it's amazing to see the other faces of people."
                                     hide sincomoda
-                                    show sgrin
+                                    show smikan
                                     play sound "audio/correct.wav" volume 0.5
                                     s "That sound beautiful"
                                     y "Mhm!...So...Keeping up with the stuff in your dressing room..."
+                                    stop music fadeout 1.0
+                                    play music "audio/normalmusic.mp3" fadein 1.0
                                     $reloj_desbloqueado = True
                                     jump menupreguntasprincipales
 
