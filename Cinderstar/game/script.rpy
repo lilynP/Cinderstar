@@ -58,6 +58,7 @@ define v = Character("Vladan", who_color = 'ffffff', window_background = Frame("
 define n = Character(" ??? ", who_color = 'ffffff', window_background = Frame("images/textboxnarrador.png"), callback = typing_callback)
 
 image fuegomovil = Movie(size=(2800,1100), channel = "movie", play = "images/fueguito.webm")
+image reina = Movie(size=(1920,1080), channel = "movie", play = "images/reina.webm")
 
 # The game starts here.
 
@@ -753,11 +754,11 @@ label lightbulbdemos:
                                             play sound "audio/wrong.mp3"
                                             play music "audio/horrormusic.mp3" volume 2.0
                                             hide skidding
-                                            show sseria at center, constant_shake
+                                            show smikan at center, constant_shake
                                             s "So you are not from here?"
                                             y "W-wait! I can explain! I just have bad memory you know?"
                                             s "No..."
-                                            hide sseria
+                                            hide smikan
                                             show smolestadaminimamente at center, constant_shake
                                             s "That's not just 'bad memory' if you live somewhere, you must know the name of the place you are living in right?"
                                             s "AT LEAST the planet you live in."
@@ -773,9 +774,20 @@ label lightbulbdemos:
                                             s "Ugh, I hate bad liars"
                                             s "And by the way, I never said the word 'spy'"
                                             s "You just fell inside your own trap"
-                                            y "I am not-!" with vpunch
-                                            #ESCENA DE LA REINA 
-                                            #NO OLVIDAR
+                                            y "I am not-!{nw=0.2}" with vpunch
+                                            
+                                            scene fondonegro
+                                            $renpy.pause(1)
+                                            stop music fadeout 2.0
+                                            play audio "audio/reina.mp3"
+                                            
+                                            play movie "images/reina.webm"
+                                            $ renpy.pause(5, hard=True)
+                                            pause 5
+
+                                            $renpy.pause(2)
+                                            n "Oopsie"
+                                            
                                             $renpy.full_restart()
 
 
