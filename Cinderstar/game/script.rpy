@@ -2,6 +2,7 @@
 default reloj_desbloqueado = False
 #for avoiding asking the same question all over again
 default maniquies = False
+default pdrawers = False
 
 #for the speaking sounds (typewriter)
 init python:
@@ -254,6 +255,22 @@ label menupreguntasprincipales:
     call screen menu_reloj
 
 
+label askdrawers:
+    if pdrawers:
+        hide spensativa
+        show strescuartos
+        s "Haven't you already asked me about my drawers?"
+        hide strescuartos
+        show skidding
+        s "Can you even focus on the interview?"
+        s "I think it's clear that I won't open them for you."
+        hide skidding
+        jump menupreguntasprincipales
+    else:
+        $pdrawers = True
+        jump drawers
+    
+
 label drawers:
     stop music
             
@@ -487,8 +504,8 @@ label lightbulbdemos:
     show sgrin
     s "The play is about to start, and Marcel and I appear together."
     s "The set is a half empty house with a clock on the wall, that doesn't tick by the way,"
-    s "a table on the center of the set, a lightbulb hanging on the table, that ALSO doesn't work,"
-    s "a door drawn with a crayon, and a chair, just there."
+    s "A table on the center of the set, a lightbulb hanging on the table, that ALSO doesn't work,"
+    s "A door drawn with a crayon, and a chair, just there."
     hide sgrin
     show ssonriente
     s "I go, and from the lines I remember I exclaim 'It's empty'."
@@ -555,7 +572,7 @@ label lightbulbdemos:
             show sexplicando1
             s "He asks 'What do you want me to do to fix it?' and I break into tears, yelling:"
             hide sexplicando1
-            scene escena1
+            scene escena1 with fadein
             s "'Nothing.'"
             s "'Haven't you realized the light above us doesn't work anymore?'"
             s "'It consumes energy!! Our soul!! It turns life into a lightless realm.'"
@@ -646,10 +663,96 @@ label lightbulbdemos:
                             s "So I might say there were three scripts that really caught me off guard..."
                             y "What were they?"
 
-                            "EN ESPERA"
-                            #Poner una escena de schell asustada al ver sus scripts
-                            #To be continued
-                            #NO OLVIDAR
+                            hide spensativa
+
+                            #HACER EL SGUION : vista desde abajo, con schell viendo su guion con cara de miedo y preocupacion pero sutil
+                            #HACER EL SGUION1: lo mismo que sguion1, pero con sudor que le cae de las partes descubiertas de su cara
+                            #HACER EL SGUION2: lo mismo que sguion pero con la vista ahora desde arriba
+                            scene sguion
+                            s "So the first one was my first ever script, in which I would 'forget' everything I read..."
+                            s "But it wasn't actually me forgetting the lines."
+                            s "It was actually the script changing everytime I memorized it..."
+                            s "As if it KNEW that I was trying to memorize it."
+                            scene sguion1
+                            s "It gave me a breakdown because the director wanted it to be due in less than a week, I think?"
+                            s "And the script wouldn't help."
+                            s "Turns out it was on purpose and it was a 'creative' added value to the story."
+                            s "Still, regardless of the creativity, I did NOT like it at all."
+                            y "You mean the script or the added value?"
+                            s "Both, I couldn't handle none of them, but I wouldn't quit because of that..."
+                            scene fondoo
+                            show sseria
+                            y "Now tell me about the second and third one...I'm curious."
+                            hide sseria
+                            show spensativa
+                            s "Ok so..."
+                            hide spensativa
+                            scene sguion2
+                            s "The second one was just straight up boring."
+                            s "It was just 200 blank pages."
+                            s "Mr. Menschsein said that I had to express it with my look, but you know?"
+                            s "Each page is at least one minute of play."
+                            s "So, 200 pages would mean around 3,33 hours!"
+                            s "Just staying silent and expressing whatever he wanted me to try to express with only my eyes..."
+                            s "I know I am sometimes quiet and I enjoy the silence, but this one was too much."
+                            s "The script ONLY contained sticky notes to express certain 'feelings' with my eyes."
+                            s "It was awful still."
+                            y "Reminds me of a music piece from a certain someone..."
+                            s "ME TOO! But copyright is a thing right?"
+                            s "You think you can cut that from the recording right?"
+                            y "Yes sure, this isnt' live."
+                            y "Yet."
+                            scene fondonegro with fade
+                            $renpy.pause(1)
+                            n "While you cut your footage let me point out something."
+                            n "Did you notice?"
+                            n "She knows Jhonnas Craige!"
+                            n "Can't even say his real name because Ramelden can get sued."
+                            n "The agent told you about the fact that she has origins from planet Earth right?"
+                            n "This is JUUUICY information!"
+                            n "Ok ok just keep cropping the footage."
+                            scene fondoo
+                            show smikan
+                            y "And...Done!"
+                            y "Nobody can hear what you just said."
+                            hide smikan
+                            show ssonriente
+                            s "Thanks! Ok so moving on to the third one..."
+                            hide ssonriente
+                            show spensativa
+                            s "It had impossible didascalies..."
+                            y "Like which ones?"
+                            s "You ever heard someone say 'go down upstairs' or viceversa?"
+                            y "Yes. But only in spanish. Like uhhh, 'subir abajo', like that?"
+                            hide spensativa
+                            show sexplicando1
+                            s "Yes, that script had a lot of those."
+                            s "It was very confusing, but not hard."
+                            s "This one probably gave me the less mental pain from the three I wanted to mention."
+                            hide sexplicando1
+                            show sseria
+                            y "Was this one also written by Mr. Menschsein?"
+                            s "Yes..."
+                            y "Do you have any comments on him that you want to share?"
+                            hide sseria
+                            show spensativa
+                            s "Not really..."
+                            hide spensativa
+                            show soh
+                            s "He's actually amazing, but his creative process is sometimes questionable."
+                            hide soh
+                            show ssonriente
+                            s "Still, it has good results in the end, that's what matters to me."
+                            s "That's why he is what he is right now mmhm."
+                            y "Alright then, so..."
+                            y "Keeping up with the main question..."
+                            hide ssonriente
+                            show soh
+                            s "Oh true!"
+                            $reloj_desbloqueado = True
+                            jump menupreguntasprincipales
+
+
 
 
                 "So what you are telling me until now is that 'The lightbulb's concept is forgetfullness and the fallout of love between a couple, right?":
@@ -715,7 +818,7 @@ label lightbulbdemos:
                             
 
 
-                        "That was another of you punchlines right? Sorry, just keep going...":
+                        "That was another of you jokes, right? Sorry, just keep going...":
                             hide sdisgusto
                             play sound "audio/correct.wav" volume 0.5
                             show sexplicando1
@@ -771,9 +874,9 @@ label lightbulbdemos:
                                             s "Just look at your hands, they are sweating."
                                             hide sjuzgona
                                             show sdisgusto
-                                            s "Ugh, I hate bad liars"
-                                            s "And by the way, I never said the word 'spy'"
-                                            s "You just fell inside your own trap"
+                                            s "Ugh, I hate bad liars."
+                                            s "And by the way, I never said the word 'spy'."
+                                            s "You just fell inside your own trap."
                                             y "I am not-!{nw=0.2}" with vpunch
                                             
                                             scene fondonegro
@@ -786,6 +889,7 @@ label lightbulbdemos:
                                             pause 5
 
                                             $renpy.pause(2)
+                                            $renpy.block_rollback()
                                             n "Oopsie"
                                             
                                             $renpy.full_restart()
@@ -858,14 +962,7 @@ label lightbulbdemos:
                                     play music "audio/normalmusic.mp3" fadein 1.0
                                     $reloj_desbloqueado = True
                                     jump menupreguntasprincipales
-
-                                    
-
-
-
-
-
-
+ 
 
             $reloj_desbloqueado = True
             jump menupreguntasprincipales

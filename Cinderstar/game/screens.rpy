@@ -1655,7 +1655,7 @@ screen menu_reloj():
         yanchor 0.5
         spacing 15
 
-        textbutton "I want to know what you keep inside your drawers" action Jump("drawers")
+        textbutton "I want to know what you keep inside your drawers" action Jump("askdrawers")
         textbutton "I want to know about the leg mannequins on the corner." action Jump("maniquies")
 
         if reloj_desbloqueado:
