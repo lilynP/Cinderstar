@@ -572,7 +572,7 @@ label lightbulbdemos:
             show sexplicando1
             s "He asks 'What do you want me to do to fix it?' and I break into tears, yelling:"
             hide sexplicando1
-            scene escena1 with fadein
+            scene escena1 with fade
             s "'Nothing.'"
             s "'Haven't you realized the light above us doesn't work anymore?'"
             s "'It consumes energy!! Our soul!! It turns life into a lightless realm.'"
@@ -642,8 +642,9 @@ label lightbulbdemos:
                             hide sexplicando
                             $reloj_desbloqueado = True
                             jump menupreguntasprincipales
-                        "But it is a well known language in planet Earth...!":
+                        "But it is a well known language...!":
                             play sound "audio/wrong.mp3"
+                            stop music
                             hide spensativa
                             show sbrazoscruzados
                             s "Sorry, what?"
@@ -652,7 +653,7 @@ label lightbulbdemos:
                                     s "Hmmm..."
                                 "It's just that I knew before she brought me here":
                                     s "'She'?"
-                            "She's already suspicious of you, just say 'nothing'"
+                            n "She's already suspicious of you, just say 'nothing'"
                             y "Yep, nothing! So what scripts did you want to mention?"
                             y "Sorry, we took a little detour didn't we?"
                             hide sbrazoscruzados
@@ -664,10 +665,10 @@ label lightbulbdemos:
                             y "What were they?"
 
                             hide spensativa
-
-                            #HACER EL SGUION : vista desde abajo, con schell viendo su guion con cara de miedo y preocupacion pero sutil
-                            #HACER EL SGUION1: lo mismo que sguion1, pero con sudor que le cae de las partes descubiertas de su cara
-                            #HACER EL SGUION2: lo mismo que sguion pero con la vista ahora desde arriba
+                            play music "audio/normalmusic2.mp3"
+                            
+                            
+                            #opcional: lo mismo que sguion pero con la vista ahora desde arriba
                             scene sguion
                             s "So the first one was my first ever script, in which I would 'forget' everything I read..."
                             s "But it wasn't actually me forgetting the lines."
@@ -687,7 +688,7 @@ label lightbulbdemos:
                             show spensativa
                             s "Ok so..."
                             hide spensativa
-                            scene sguion2
+                            scene sguion
                             s "The second one was just straight up boring."
                             s "It was just 200 blank pages."
                             s "Mr. Menschsein said that I had to express it with my look, but you know?"
@@ -700,7 +701,7 @@ label lightbulbdemos:
                             y "Reminds me of a music piece from a certain someone..."
                             s "ME TOO! But copyright is a thing right?"
                             s "You think you can cut that from the recording right?"
-                            y "Yes sure, this isnt' live."
+                            y "Yes sure, this isn't live."
                             y "Yet."
                             scene fondonegro with fade
                             $renpy.pause(1)
@@ -749,6 +750,8 @@ label lightbulbdemos:
                             hide ssonriente
                             show soh
                             s "Oh true!"
+                            stop music
+                            play music "audio/normalmusic.mp3"
                             $reloj_desbloqueado = True
                             jump menupreguntasprincipales
 
