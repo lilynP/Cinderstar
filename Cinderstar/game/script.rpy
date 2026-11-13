@@ -4,6 +4,27 @@ default reloj_desbloqueado = False
 default maniquies = False
 default pdrawers = False
 
+#for the notify and new findings############
+default director = False
+default concordia = False
+default brujas = False
+default marcel = False
+default normal = False
+default johncage = False
+default pestanas = False
+default competitividad = False
+default efectivamente = False
+default scripts = False
+default relojes11 = False
+default thequeen = False
+default god = False
+default father = False
+
+#and its credit score
+default points = 0
+
+########################################################
+
 #for the speaking sounds (typewriter)
 init python:
     import random
@@ -32,6 +53,12 @@ init python:
         if event == "end":
             #optional: play a line finished click to continue sound
             renpy.sound.play("audio/typewriter1.mp3", channel = "sound")    
+
+#for the notify thingy
+init python:
+    def notificar(pista_texto):
+        renpy.notify("New finding! " + pista_texto)
+
 
 #for the trembling movement
 
@@ -503,6 +530,8 @@ label lightbulbdemos:
     hide skidding
     show sgrin
     s "The play is about to start, and Marcel and I appear together."
+    $marcel = True
+    $notificar("Actor's name")
     s "The set is a half empty house with a clock on the wall, that doesn't tick by the way,"
     s "A table on the center of the set, a lightbulb hanging on the table, that ALSO doesn't work,"
     s "A door drawn with a crayon, and a chair, just there."
@@ -521,6 +550,8 @@ label lightbulbdemos:
     hide smolestaojoabierto 
     show sbrazoscruzados
     s "But yes, also the cup'"
+    $normal = True
+    $notificar("Peculiar plays")
     hide sbrazoscruzados
     show ssonriente
     menu:
@@ -593,6 +624,8 @@ label lightbulbdemos:
                     hide sseria
                     show skidding
                     s "So here at Concordia we have many directors you know?"
+                    $concordia = True
+                    $notificar("Theater name")
                     hide skidding
                     show smikan
                     s "But the problem here is that the scripts are weird, but dream like {sc=5} WEIRD {/sc}"
@@ -606,10 +639,14 @@ label lightbulbdemos:
                     show sgrin
                     y "I have never heard of that kind of dreams before, but they do sound interesting!"
                     s "So, the scripts work some way the same as a dream, but just the scripts from Mr Menschsein as far I have seen."
+                    $johncage = True
+                    $notificar("Jhonnas Craige")
                     hide sgrin
                     show ssonriente
                     s "Quite ironic though."
                     y "Didn't Menschsein mean 'being human' in german? Sorry to interrupt..."
+                    $director = True
+                    $notificar("Director's name")
                     hide ssonriente
                     show spensativa
                     s "Yes, but it is a language I haven't heard in so much time, because here at Concordia not many use it."
@@ -635,6 +672,8 @@ label lightbulbdemos:
                             show spensativa
                             s "That's probably what I felt."
                             s "Did you know some witches are depicted with a reversed broom?"
+                            $brujas = True
+                            $notificar("Depiction of witches")
                             hide spensativa
                             show sexplicando1
                             s "It's awesome how some books lie to us..."
@@ -729,6 +768,8 @@ label lightbulbdemos:
                             show sexplicando1
                             s "Yes, that script had a lot of those."
                             s "It was very confusing, but not hard."
+                            $scripts = True
+                            $notificar("Abnormal scripts")
                             s "This one probably gave me the less mental pain from the three I wanted to mention."
                             hide sexplicando1
                             show sseria
@@ -783,6 +824,8 @@ label lightbulbdemos:
                     menu:
                         "Wait, you don't have eyelashes?":
                             s "Sigh."
+                            $pestanas = True
+                            $notificar("She isn't a common person")
                             play sound "audio/wrong.mp3"
                             y "Sorry if that uncomfortable! My apologies..."
                             stop music fadeout 2.0
@@ -817,9 +860,6 @@ label lightbulbdemos:
                             play music "audio/normalmusic.mp3" fadein 2.0
                             $reloj_desbloqueado = True
                             jump menupreguntasprincipales
-
-                            
-
 
                         "That was another of you jokes, right? Sorry, just keep going...":
                             hide sdisgusto
@@ -903,18 +943,20 @@ label lightbulbdemos:
                                             hide skidding
                                             show svladan
                                             play music "audio/horrormusic.mp3" volume 2.0
-                                            s "Why are you different?"
+                                            s "Why are you different?" 
                                             s "Do you happen to have had a sad backstory?"
                                             s "A malformation from birth?"
                                             s "A superpower?"
                                             s "A talent better than anyone else here at the theatre?"
                                             s "A talent better than mine?"
+                                            $competitividad = True
+                                            $notificar("Competition?")
                                             s "A disability?"
                                             s "Why?"
                                             s "{sc=5}Why are you different?{/sc}"
                                             s "Huh."
                                             s "Or perhaps..."
-                                            s "Are you a traveler from the other ground?"
+                                            s "{sc=5}Are you a traveler from the other ground?{/sc}"
                                             n "You don't have to answer her."
                                             n "Everyone is different in their own way!! <3"
                                             n "Don't listen to her."
@@ -955,6 +997,8 @@ label lightbulbdemos:
                                     show sincomoda
                                     s "Sorry, this must have been kind of annoying."
                                     y "Not really."
+                                    $efectivamente = True
+                                    $notificar("You're right, she isn't normal")
                                     y "It's just a part of you and it's amazing to see the other faces of people."
                                     hide sincomoda
                                     show smikan
@@ -969,10 +1013,6 @@ label lightbulbdemos:
 
             $reloj_desbloqueado = True
             jump menupreguntasprincipales
-
-
-
-
 
 
 label relojenlapared:
@@ -996,4 +1036,126 @@ label maniquies:
     else:
         $maniquies = True
         jump menupreguntasprincipales1
+
+
+label resumen:
+    scene fondonegro with fade
+    $renpy.pause(2)
+    scene fondo1vladan with fade
+    show vladan3 with fade
+    v "You have to manipulate her."
+    v "You have to bring us information."
+    hide vladan3 with dissolve
+    scene fondonegro with fade
+    $renpy.pause(1)
+    "It was like that right?"
+    "Right?"
+
+    $renpy.pause(1)
+    n "Hey I think you two have talked more than enough. I think it's time you choose a path..."
+    n "I mean, you have gotten enough information! Let's see..."
+    n "I mean you have {b}bad{/b} memory, you know?"
+
+    if director:
+        n "The director's name is Menschsein. Probably his last name."
+        n "He makes all these weird plays."
+        $points +=1
+    
+    if concordia:
+        n "The theater's name is Concordia, don't forget that."
+        n "It's a whole new world for you."
+        n "Yeah, like the song."
+        $points +=1
+   
+    if brujas:
+        n "Even the witches depicted in books are weird, have you heard the girl? They flight with a reverse broom!"
+        n "Are they onto something?"
+        n "Concordia people are like aliens for real."
+        n "Or not?"
+        $points +=1
+   
+    if marcel:
+        n "Oh yeah true, the Marcel guy."
+        n "Who even is that?"
+        n "Is he from here? Or is he someone like HER?"
+        n "Like, not from here and comes from the other ground."
+        n "That's probably not his name at all, it can be an alias."
+        n "Maybe he was created by the entity..."
+        $points +=1
+    
+    if normal:
+        n "I have no words about the plays!"
+        n "They are comedic but ABSURD."
+        n "They aren't normal."
+        n "The people here take it seriously."
+        n "As those who criticizes movies and while they have only watched Fruit Fiction as their only elite knowledge movie."
+        n "Bleh."
+        $points +=1
+  
+    if scripts:
+        n "We need to keep an eye on Mr Menschsein's scripts."
+        n "They live I think."
+        n "Or however you want to put it."
+        $points +=1
+    
+    if johncage:
+        n "As I mentioned before, did you notice that she mention Jhonnas Craige?"
+        n "Her family must have been an art enthusiast to know him and probably respect him."
+        $points +=1
+    
+    if pestanas:
+        n "She for real isn't normal I mean look at those eyelashes."
+        n "She's a human converted into a doll...What is she?"
+        $points +=1
+   
+    if competitividad:
+        n "There's probably a competivity culture around the theater, don't you think?"
+        n "Like, who's more special than who."
+        n "No 'Yay! Let's help each other out' culture."
+        n "Kinda sad."
+        $points +=1
+    
+    if efectivamente:
+        n "Yeah you're right. She's indeed not normal. She's a burnt body dressed as a doll."
+        n "It was not only the lashes..."
+        $points +=1
+    
+    if relojes11:
+        n "Those clocks..."
+        n "There must be a reason why they look like the only time is 11 o'clock"
+        n "We can ask our beloved agent about that."
+        n "It can be a clue to the entity's whereabouts."
+        $points +=1
+    
+    if thequeen:
+        n "Who's 'The Queen'? Could it be the entity?"
+        $points +=1
+
+    if god:
+        n "Who is 'god'? Is it the entity? Could it be?"
+        $points +=1
+    
+    if father:
+        n "Who is 'father'? If it was the doctor, whatever he is, he must have been a good one."
+        n "Probably one who had an obsession with dolls."
+        n "Haven't you read something about it at the secret room behind the yellow door at the B building?"
+        $points +=1
+    
+
+    n "Hmmm..."
+    if points >= 7:
+        n "Hey not bad, we yes WE got solid information to give to our dear agent, yay!"
+    if points <= 7:
+        n "Oh oops."
+        n "Damn it!"
+        n "We don't have enough information to share..."
+        n "I would have given you a game over but I will let you see the end of this."
+    
+    n "She already considers you a friend, so be careful because according to the J-414 records, the entity mingling around can kill you if it knows you don't belong here."
+    n "I repeat."
+    n "You {b}don't{/b} belong here."
+
+
+
+
 
