@@ -1128,6 +1128,20 @@ label relojenlapared:
                     y "How?"
                     y "Can I {b}see{/b}?"
                     #schell se quita la mascara (con animacion i guess)
+                    # 
+                    #
+                    s "Do I still look pretty to you?"
+                    menu:
+                        "You never looked pretty to me in the first place.":
+                            show sgiffany
+                            s "..."
+                            s "..."
+                            s "..."
+                            s "..."
+                            s "Leave."
+                            s "Please."
+                            s "LEAVE NOW." with vpunch
+                        "Yes! You do look good."
                 "And the numbers?":
                     hide ssonriente
                     show sdisgusto
