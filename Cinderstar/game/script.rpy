@@ -1016,8 +1016,178 @@ label lightbulbdemos:
 
 
 label relojenlapared:
-    "en espera wait wait 1"
-    return
+    s "Which one? This?"
+    hide spensativa
+    scene reloj with fade
+    y "Yes, that one, why did you decide to use that specific clock?"
+    s "I think it represents my eyes perfectly."
+    y "Hmmm..."
+    y "You may be right."
+    y "But why that design?"
+    s "Well, I like ballerinas a lot."
+    s "I used to practice ballet back when I was a child."
+    s "That's the only vivid memory I have from when I was a youngster."
+    s "But, now I just can't you know?"
+    menu:
+        "I want to ask you about the time...Why is it all 11s?":
+            scene fondoo
+            show skidding
+            s "Do you even have a clock in your house?"
+            menu:
+                "I never knew how to read it. That's why I brought a sand timer with me.":
+                    hide skidding
+                    show soh
+                    s "Woo..."
+                    s "Old fashioned."
+                    y "Yes, I like to bring it around and look at it. So I don't have to look at the clock!"
+                    y "I have a timer for 1, 5 and 10 minutes."
+                    hide soh
+                    show ssonriente
+                    s "Ah that's nice."
+                "I do have a clock, it's just that I never look at the time haha...":
+                    hide skidding
+                    show sdisgusto
+                    s "Then how do you tell what time it is? Aren't you a professional?"
+                    y "Yes I am, but my school never taught me these...I am so sorry..."
+                    hide sdisgusto
+                    show strescuartos
+                    s "Anyway."
+                    s "This interview is about me so I couldn't care less."
+            y "Yeah so tell me, why are all of the numers 11s?"
+            hide strescuartos
+            hide ssonriente
+            show soh
+            s "Oh so you don't know?"
+            s "The queen actually made this system since she dreamed of it."
+            hide soh
+            show skidding
+            s "She told me it all started when she was a child, but she implemented it until now."
+            hide skidding
+            show sdisgusto
+            s "It's still confusing to look at you know?"
+            hide sdisgusto
+            show sexplicando1
+            s "But just imagine a regular clock, having the same numbers but just replaced with an eleven."
+            hide sexplicando1
+            show sseria
+            s "Oh so that's why, Yeah, I think I can manage it...But what happens when you tell the time?"
+            s "Is it just 'Hey, it's 11:11, time for a break'?"
+            hide sseria
+            show spensativa
+            s "Yes I guess, you just get used to it. Some people tend to point with their finger at the time so they don't get confused."
+            s "They still don't know they are confused, it's an habit taken as normal..."
+            hide spensativa
+            show sseria
+            y "So you don't think it's a normal thing to do?"
+            hide sseria
+            show spensativa
+            s "Not really...I respect the queen and all but this method of her has confused me since it became a rule..."
+            hide spensativa
+            show sseria
+            y "Yeah but don't feel like that!"
+            y "You might learn how to read it well sometime soon. Just wait."
+            hide sseria
+            show ssonriente
+            "Hey! Schell had a nice feeling about you! That happens not so often. Congrats!"
+            n "But HEY HEY HEYYY!!!!" with vpunch
+            n "WHY ARE YOU TWO TALKING LIKE TWO FRIENDS?!?!!?"
+            n "YOU WERE SENT BY THE AGENTS TO GET INFORMATION FROM HER!!!!"
+
+        "I want to ask you about the eye.":
+            scene fondoo
+            show sseria
+            y "Wouldn't you think it's a bit creepy to look at?"
+            y "Or...Have the feeling someone is watching you at all times?"
+            hide sseria
+            show spensativa
+            s "It's not creepy at all...It's beautiful actually."
+            y "Why do you think that?"
+            s "I don't know, I like the feeling of being watched. Specially by that eye."
+            hide spensativa
+            show sseria
+            y "Do you think it gives you a pleasant feeling?"
+            s "It's god."
+            hide sseria
+            show ssonriente
+            s "God sees us everyday."
+            y "Don't you feel controled by it?"
+            s "Oh not at all! I like the fact it is looking at me! It even has my eyes."
+            menu:
+                "And the ballerina?":
+                    hide ssonriente
+                    show sdisgusto
+                    s "We already talked about that I think."
+                    y "I know but, I want to know why does she specifically look like that."
+                    hide disgusto
+                    show spensativa
+                    s "I think to recreate how I used to look like when I was younger I guess..."
+                    y "How come? Have you changed a lot?"
+                    hide spensativa
+                    show sseria
+                    s "Father says I have, and a lot."
+                    y "How?"
+                    y "Can I {b}see{/b}?"
+                    #schell se quita la mascara (con animacion i guess)
+                "And the numbers?":
+                    hide ssonriente
+                    show sdisgusto
+                    s "Hmm?"
+                    s "Are you even from here?"
+                    y "I-I am, I just use a sand timer! This one!"
+                    "You show her the sand timer."
+                    s "That's very old fashioned."
+                    s "But now old fashioned in the fashion way you know?"
+                    s "I think it makes you look older haha."
+                    s "And that's not a compliment by the way."
+                    y "You're kind of right haha..."
+                    hide sdisgusto
+                    show skidding
+                    s "You never knew how to read an average clock? Hmmm..."
+                    n "Don't make it worse! She's already suspicious of you! D:"
+                    menu:
+                        "I actually do, it's just that I prefer this one.":
+                            hide skidding
+                            show strescuartos
+                            s "Oh alright."
+                            n "You just saved yourself! Be glad!"
+                            n "I didn't even intervene yet you could handle it! Good job little demon."
+                        "No, I actually don't.":
+                            hide skidding
+                            show ssonriente
+                            s "Haha it can be a bit hard can't it?"
+                            n "WAIT WHAT?" with vpunch
+                            n "She was supposed to throw you out of the room!!!!"
+                            n "What is happeningggg hhghasjfhhsjrhghjs"
+                    hide strescuartos
+                    hide ssonriente
+                    show sseria
+                    y "So, keep talking to me about your room! Is there anything else you want to add?"
+                    n "This conversation line sounds so forced LMAO get creative please."
+                    hide sseria
+                    show spensativa
+                    s "Hmmm, not reallyyy..."
+                    hide spensativa
+                    show soh
+                    s "OH, no, no. Yes. I want to show something to my fans!"
+                    s "Thanks to these ladies I am stitched well!"
+                    s "Let me show you all my strong and beautiful threads!"
+                    hide soh
+                    scene scuerdas
+                    
+                    #dibujar su espalda 
+                    s "These are the reasons why I can bring you all my amazing superb marvelous plays!"
+                    y "And why do you think they are important?"
+                    s "Because they make me look beautiful and not like some mess without 'máscara'."
+                    y "Do you often feel insecure about your looks?"
+                    y "Your {sc=5}actual{/sc} looks?"
+                    s "..."
+                    s "That's not a question to ask."
+                    y "Oh sure anyway..."
+
+
+
+
+    
 
 label maniquies:
     if maniquies:
