@@ -1143,7 +1143,7 @@ label relojenlapared:
                     scene smascara with fade
                     $renpy.pause(1)
                     scene smascara1 with fade
-                    $renpy.pause(2)
+                    $renpy.pause(1)
                     scene fondonegro with fade
                     play sound "audio/coser.mp3"
                     $renpy.pause(1)
@@ -1152,18 +1152,20 @@ label relojenlapared:
                     s "Do I still look pretty to you?"
                     menu:
                         "{sc=5}You never looked pretty to me in the first place.{/sc}":
+                            stop music
+                            play music "audio/horrormusic.mp3" volume 2.0 fadein 2.0
                             s "..."
                             s "..."
-                            scene fondonegro
-                            play sound "audio/coser.mp3"
-                            scene fondoo
-                            show sgiffany
                             s "..."
                             s "..."
-                            
                             s "Leave."
                             s "Please."
-                            s "LEAVE NOW." with vpunch
+                            s "{sc=5}LEAVE NOW.{/sc}" with vpunch
+
+
+
+
+                            $renpy.full_restart()
                         "{sc=5}Yes! You do look good.{/sc}":
                             "en espera"
                 "And the numbers?":
