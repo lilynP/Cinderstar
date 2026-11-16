@@ -5,7 +5,7 @@ default maniquies = False
 default pdrawers = False
 
 #for the notify and new findings############
-default director = False
+default directorr = False
 default concordia = False
 default brujas = False
 default marcel = False
@@ -276,6 +276,7 @@ label menupreguntasprincipales:
     hide sseria
     hide strescuartos
     hide smikan
+    hide sexplicando1
     show spensativa
     s "Well, what do you want to know about it?"
 
@@ -639,13 +640,12 @@ label lightbulbdemos:
                     show sgrin
                     y "I have never heard of that kind of dreams before, but they do sound interesting!"
                     s "So, the scripts work some way the same as a dream, but just the scripts from Mr Menschsein as far I have seen."
-                    $johncage = True
-                    $notificar("Jhonnas Craige")
+                    
                     hide sgrin
                     show ssonriente
                     s "Quite ironic though."
                     y "Didn't Menschsein mean 'being human' in german? Sorry to interrupt..."
-                    $director = True
+                    $directorr = True
                     $notificar("Director's name")
                     hide ssonriente
                     show spensativa
@@ -738,6 +738,8 @@ label lightbulbdemos:
                             s "The script ONLY contained sticky notes to express certain 'feelings' with my eyes."
                             s "It was awful still."
                             y "Reminds me of a music piece from a certain someone..."
+                            $johncage = True
+                            $notificar("Jhonnas Craige")
                             s "ME TOO! But copyright is a thing right?"
                             s "You think you can cut that from the recording right?"
                             y "Yes sure, this isn't live."
@@ -1017,6 +1019,8 @@ label lightbulbdemos:
 
 label relojenlapared:
     s "Which one? This?"
+    stop music fadeout 2.0
+    play music "audio/normalmusic2.mp3" 
     hide spensativa
     scene reloj with fade
     y "Yes, that one, why did you decide to use that specific clock?"
@@ -1070,8 +1074,8 @@ label relojenlapared:
             s "But just imagine a regular clock, having the same numbers but just replaced with an eleven."
             hide sexplicando1
             show sseria
-            s "Oh so that's why, Yeah, I think I can manage it...But what happens when you tell the time?"
-            s "Is it just 'Hey, it's 11:11, time for a break'?"
+            y "Oh so that's why, Yeah, I think I can manage it...But what happens when you tell the time?"
+            y "Is it just 'Hey, it's 11:11, time for a break'?"
             hide sseria
             show spensativa
             s "Yes I guess, you just get used to it. Some people tend to point with their finger at the time so they don't get confused."
@@ -1110,6 +1114,8 @@ label relojenlapared:
             hide sseria
             show ssonriente
             s "God sees us everyday."
+            $god = True
+            $notificar("God?")
             y "Don't you feel controled by it?"
             s "Oh not at all! I like the fact it is looking at me! It even has my eyes."
             menu:
@@ -1118,8 +1124,10 @@ label relojenlapared:
                     show sdisgusto
                     s "We already talked about that I think."
                     y "I know but, I want to know why does she specifically look like that."
-                    hide disgusto
+                    hide sdisgusto
                     show spensativa
+                    stop music fadeout 2.0
+                    play music "audio/abandonado.mp3" fadein 2.0
                     s "I think to recreate how I used to look like when I was younger I guess..."
                     y "How come? Have you changed a lot?"
                     hide spensativa
@@ -1127,21 +1135,37 @@ label relojenlapared:
                     s "Father says I have, and a lot."
                     y "How?"
                     y "Can I {b}see{/b}?"
-                    #schell se quita la mascara (con animacion i guess)
-                    # 
-                    #
+                    hide sseria
+                    show sincomoda
+                    s "..."
+                    hide sincomoda
+                    
+                    scene smascara with fade
+                    $renpy.pause(1)
+                    scene smascara1 with fade
+                    $renpy.pause(2)
+                    scene fondonegro with fade
+                    play sound "audio/coser.mp3"
+                    $renpy.pause(1)
+                    scene smascara2 with fade
+                    
                     s "Do I still look pretty to you?"
                     menu:
-                        "You never looked pretty to me in the first place.":
+                        "{sc=5}You never looked pretty to me in the first place.{/sc}":
+                            s "..."
+                            s "..."
+                            scene fondonegro
+                            play sound "audio/coser.mp3"
+                            scene fondoo
                             show sgiffany
                             s "..."
                             s "..."
-                            s "..."
-                            s "..."
+                            
                             s "Leave."
                             s "Please."
                             s "LEAVE NOW." with vpunch
-                        "Yes! You do look good."
+                        "{sc=5}Yes! You do look good.{/sc}":
+                            "en espera"
                 "And the numbers?":
                     hide ssonriente
                     show sdisgusto
@@ -1240,7 +1264,7 @@ label resumen:
     n "I mean, you have gotten enough information! Let's see..."
     n "I mean you have {b}bad{/b} memory, you know?"
 
-    if director:
+    if directorr:
         n "The director's name is Menschsein. Probably his last name."
         n "He makes all these weird plays."
         $points +=1
