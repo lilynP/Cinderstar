@@ -84,9 +84,12 @@ define s = Character("Schell", who_color='ffffff', window_background = Frame("im
 define y = Character("You", who_color = 'ffffff', window_background = Frame("images/textboxyou.png"), callback = typing_callback)
 define v = Character("Vladan", who_color = 'ffffff', window_background = Frame("images/barrattextovladan.png"), callback = typing_callback)
 define n = Character(" ??? ", who_color = 'ffffff', window_background = Frame("images/textboxnarrador.png"), callback = typing_callback)
+define chicas = "?"
+define c = DynamicCharacter("chicas", who_color = 'ffffff', what_color = '3E424B', window_background = Frame("images/textboxcc.png"), callback = typing_callback )
 
 image fuegomovil = Movie(size=(2800,1100), channel = "movie", play = "images/fueguito.webm")
 image reina = Movie(size=(1920,1080), channel = "movie", play = "images/reina.webm")
+image sangre = Movie(size=(1920,1080), channel = "movie", play = "images/sangre.webm")
 
 # The game starts here.
 
@@ -1153,6 +1156,7 @@ label relojenlapared:
                     menu:
                         "{sc=5}You never looked pretty to me in the first place.{/sc}":
                             stop music
+                            $renpy.block_rollback()
                             play music "audio/horrormusic.mp3" volume 2.0 fadein 2.0
                             s "..."
                             s "..."
@@ -1162,9 +1166,112 @@ label relojenlapared:
                             s "Please."
                             s "{sc=5}LEAVE NOW.{/sc}" with vpunch
 
+                            scene fondonegro
+                            stop music
+                            play music "audio/abandonado.mp3"
+                            play sound "audio/puerta.wav"
+                            $renpy.pause(1)
+                            scene fondocc
+                            play sound "audio/paso.wav"
+                            $renpy.pause(1)
+                            scene fondocczoom
+                            play sound "audio/paso.wav"
+                            $renpy.pause(1)
+                            scene fondocczoom1
+                            play sound "audio/paso.wav"
+                            $renpy.pause(1)
+                            scene fondocc with fade
 
+                            show ccsorpresa with fade
+                            c "Hey! Watch out!" with vpunch
+                            c "Wait...Who are you?"
+                            "You freak out because you have never seen a siamese girl before."
+                            "Just don't show it please. It's rude"
+                            $chicas = "Siameses"
+                            y "Hello miss...?"
+                            c "Chirrel! and Cherryl!"
+                            y "Hi misses...So I was trying to interview Schell but I made her upset haha..."
+                            y "(What am I even doing?)"
+                            hide ccsorpresa
+                            show cclying
+                            c "Did you say something about her beauty?"
+                            menu:
+                                "Yes":
+                                    hide cclying
+                                    show ccconfunsion
+                                    c "Do they even know how to treat a girl like her? Like yes yes..."
+                                "No":
+                                    hide cclying
+                                    show ccwow
+                                    c "Hmm, that's weird, it even looks like..."
+                                    hide ccwow
+                                    show cclying
+                                    c "YOU'RE LYINGGGG" with vpunch
+                            y "OK I DIDN'T MEAN TO!" with vpunch
+                            y "I was trying to be honest with her!"
+                            y "The conversation went so good I didn't think I would say that..."
+                            hide cclying
+                            hide ccconfunsion
+                            show ccconfunsion
+                            c "You really don't know how to handle girls right?"
+                            c "What did you even say to her?"
+                            y "So she took off her mask and-{nw=0.3}"
+                            hide ccconfunsion
+                            show ccwow
+                            c "WAIT FOR REAL?" with vpunch
+                            c "SHE TOOK OFF HER MASK?"
+                            c "Do you even know what you just achieved?"
+                            y "Not really..."
+                            n "What do you mean you don't know?"
+                            n "We were trying to get information from her you dumbass."
+                            hide ccwow
+                            show cclover
+                            c "ARE YOU SURE YOU AREN'T HER LOVER OR SOMETHING!?"
+                            c "Hhahshsajdahsd SCHELL HAS A LOVER!! SCHELL HAS A LOVER!!{nw=0.3}"
+                            y "N-NO!!!!!" with vpunch
+                            y "WE ARE NOT LOVERS!!"
+                            c "Do you think there's something I can do to help?"
+                            hide cclover
+                            show cclying
+                            c "Erm..."
+                            hide cclying
+                            show ccsorpresa
+                            c "No."
+                            hide ccsorpresa
+                            show ccwow
+                            c "OH TRUE!"
+                            hide ccwow
+                            show cclover
+                            c "You might see your lover for a last time, she's having a play in some time."
+                            c "Like a farewell kiss mwah mwah-{nw=0.3}"
+                            y "O-OKAY I GOT IT!!!!" with vpunch
+                            hide cclover
+                            show ccsorpresa
+                            y "I will go and see her."
 
+                            #### ANIMACION DE SCHELL ACTUANDO ALGUNA WEÁ ###
+                            scene fondonegro
+                            stop music
+                            play music "audio/horrormusic.mp3"
+                            y "Yeah now I know why I am a trial agent."
+                            y "Not someone like him..."
+                            y "Sigh..."
+                            
+                            scene fondo1vladan
+                            show vladan2
+                            v "Hmm."
+                            hide vladan2
+                            show vladan3
+                            v "What did I tell you?"
+                           
 
+                            scene fondonegro with fade
+                            $renpy.pause(1)
+                            
+                            play sound "audio/slimeo.mp3"
+                            play movie "images/slimeo.webm"
+                            
+                            $renpy.pause(14)
                             $renpy.full_restart()
                         "{sc=5}Yes! You do look good.{/sc}":
                             "en espera"
