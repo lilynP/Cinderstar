@@ -866,7 +866,7 @@ label lightbulbdemos:
                             $reloj_desbloqueado = True
                             jump menupreguntasprincipales
 
-                        "That was another of you jokes, right? Sorry, just keep going...":
+                        "That was another one, right? Sorry, just keep going...":
                             hide sdisgusto
                             play sound "audio/correct.wav" volume 0.5
                             show sexplicando1
@@ -1027,6 +1027,8 @@ label relojenlapared:
     hide spensativa
     scene reloj with fade
     y "Yes, that one, why did you decide to use that specific clock?"
+    $relojes11 = True
+    $notificar("11 o'clock")
     s "I think it represents my eyes perfectly."
     y "Hmmm..."
     y "You may be right."
@@ -1066,6 +1068,9 @@ label relojenlapared:
             show soh
             s "Oh so you don't know?"
             s "The queen actually made this system since she dreamed of it."
+            $thequeen = True
+            $notificar("Queen?")
+            
             hide soh
             show skidding
             s "She told me it all started when she was a child, but she implemented it until now."
@@ -1097,8 +1102,8 @@ label relojenlapared:
             show ssonriente
             "Hey! Schell had a nice feeling about you! That happens not so often. Congrats!"
             n "But HEY HEY HEYYY!!!!" with vpunch
-            n "WHY ARE YOU TWO TALKING LIKE TWO FRIENDS?!?!!?"
-            n "YOU WERE SENT BY THE AGENTS TO GET INFORMATION FROM HER!!!!"
+            n "EXCUSE ME, WHY ARE YOU TWO TALKING LIKE TWO FRIENDS?!?!!?"
+            jump resumen
 
         "I want to ask you about the eye.":
             scene fondoo
@@ -1274,7 +1279,47 @@ label relojenlapared:
                             $renpy.pause(14)
                             $renpy.full_restart()
                         "{sc=5}Yes! You do look good.{/sc}":
-                            "en espera"
+                            scene fondonegro
+                            stop music
+                            play music "audio/normalmusic2.mp3"
+                            play sound "audio/coser.mp3"
+                            scene fondoo
+                            show ssonriente
+                            s "Yay! I knew you would say that! Good boy! Or girl"
+                            "You feel uncomfortable with her good boy comment but you still keep up."
+                            y "Can I still ask you about your dressing room?"
+                            hide ssonriente
+                            show soh
+                            s "Yes! Anything for you."
+                            y "Ok so I was looking around and I saw this painting on the wall."
+                            hide soh
+                            scene pintura
+                            y "What is it? What does it represent?"
+                            s "To be honest, not even I know about it. It was painted by father."
+                            menu:
+                                "Then what do you think it represents?":
+                                    s "Hmmm..."
+                                    s "Probably my admirers being represented as crocodiles."
+                                    s "And me hanging with my feet on that rope."
+                                    y "(I think she makes everything about herself.)"
+                                    n "Yes she does."
+                                "Father? Who's 'father'?":
+                                    show ssonriente at left
+                                    s "The man who gave me this body."
+                                    $father = True
+                                    $notificar("Father of hers")
+                                    s "I owe him so much."
+                                    s "That's why I act."
+                            y "And you're OK with that?"
+                            s "With what?"
+                            y "To keep pleasing others as payment?"
+                            hide ssonriente
+                            show smikan at left
+                            s "I don't think it's bad actually haha."
+                            s "I think we should be grateful about everything...So yeah, I am doing this because I want to, yep."
+                            y "Alright, I feel that's valid enough."
+                            "You don't."
+                            jump resumen
                 "And the numbers?":
                     hide ssonriente
                     show sdisgusto
@@ -1321,15 +1366,16 @@ label relojenlapared:
                     hide soh
                     scene scuerdas
                     
-                    #dibujar su espalda 
+                    
                     s "These are the reasons why I can bring you all my amazing superb marvelous plays!"
                     y "And why do you think they are important?"
-                    s "Because they make me look beautiful and not like some mess without 'máscara'."
+                    s "Because they make me look beautiful and not like some mess without 'mascara'."
                     y "Do you often feel insecure about your looks?"
                     y "Your {sc=5}actual{/sc} looks?"
                     s "..."
                     s "That's not a question to ask."
                     y "Oh sure anyway..."
+                    jump resumen
 
 
 
@@ -1358,6 +1404,8 @@ label maniquies:
 label resumen:
     scene fondonegro with fade
     $renpy.pause(2)
+    "A memory comes flashing to you like a bullet train..."
+
     scene fondo1vladan with fade
     show vladan3 with fade
     v "You have to manipulate her."
@@ -1376,10 +1424,22 @@ label resumen:
     if directorr:
         n "The director's name is Menschsein. Probably his last name."
         n "He makes all these weird plays."
+        n "These plays must have a meaning though."
+        n "We can ask around the ███ to see if anyone gets a meaning from the plays."
+        n "We never know if that director is the entity or not."
+        y "Wait which entity?"
+        n "Ah you don't remember? You're the one who read the damn article about it."
+        y "I don't remember doing so."
+        n "It was before VladVlad came in and yaddayadda."
+        y "Hmmm...No..?"
+        n "Yeah he probably did it."
+        y "Did what?"
+        n "Uhh nothing."
         $points +=1
     
     if concordia:
         n "The theater's name is Concordia, don't forget that."
+        n "That's how these freaks call it instead of 'Spikeball'."
         n "It's a whole new world for you."
         n "Yeah, like the song."
         $points +=1
@@ -1398,13 +1458,16 @@ label resumen:
         n "Like, not from here and comes from the other ground."
         n "That's probably not his name at all, it can be an alias."
         n "Maybe he was created by the entity..."
+        y "WHAT'S WITH YOU AND THE ENTITY?"
+        n "Calm down bruh I am trying to remember what you gathered."
         $points +=1
     
     if normal:
+        n "Oh YEAH!"
         n "I have no words about the plays!"
         n "They are comedic but ABSURD."
         n "They aren't normal."
-        n "The people here take it seriously."
+        n "The people here take them seriously."
         n "As those who criticizes movies and while they have only watched Fruit Fiction as their only elite knowledge movie."
         n "Bleh."
         $points +=1
@@ -1418,14 +1481,20 @@ label resumen:
     if johncage:
         n "As I mentioned before, did you notice that she mention Jhonnas Craige?"
         n "Her family must have been an art enthusiast to know him and probably respect him."
+        n "Even if I dislike his 'music' blehhh..."
+        y "I think all art should be respected, don't be rude."
+        n "Nonsense."
         $points +=1
     
     if pestanas:
+        n "Hmmmm...."
         n "She for real isn't normal I mean look at those eyelashes."
+        y "Hey! That's rude!"
         n "She's a human converted into a doll...What is she?"
         $points +=1
    
     if competitividad:
+        n "About the culture inside the Spikeball..."
         n "There's probably a competivity culture around the theater, don't you think?"
         n "Like, who's more special than who."
         n "No 'Yay! Let's help each other out' culture."
@@ -1433,8 +1502,11 @@ label resumen:
         $points +=1
     
     if efectivamente:
+        n "My bad."
         n "Yeah you're right. She's indeed not normal. She's a burnt body dressed as a doll."
         n "It was not only the lashes..."
+        y "When did I even say something about her?"
+        n "Shhhh."
         $points +=1
     
     if relojes11:
@@ -1445,17 +1517,24 @@ label resumen:
         $points +=1
     
     if thequeen:
-        n "Who's 'The Queen'? Could it be the entity?"
+        n "And who's 'The Queen'? Could it be the entity?"
+        n "Something tells me she is!!!!!!!"
+        y "You are just a fragment from my thoughts you know? There isn't 'something'"
+        n "Shut your mouth."
         $points +=1
 
     if god:
-        n "Who is 'god'? Is it the entity? Could it be?"
+        n "By the way, who is 'god'? Is it the entity? Could it be? Is it related to the queen?"
+        n "I need answers."
         $points +=1
     
     if father:
-        n "Who is 'father'? If it was the doctor, whatever he is, he must have been a good one."
+        n "And yeah, who is 'father'? If he was the doctor, whatever he is, he must have been a good one."
         n "Probably one who had an obsession with dolls."
         n "Haven't you read something about it at the secret room behind the yellow door at the B building?"
+        n "If he was from the other ground he must have been an assasin."
+        n "Like the Black Dahlia case or something."
+        y "That doesn't make any sense!"
         $points +=1
     
 
@@ -1468,9 +1547,44 @@ label resumen:
         n "We don't have enough information to share..."
         n "I would have given you a game over but I will let you see the end of this."
     
-    n "She already considers you a friend, so be careful because according to the J-414 records, the entity mingling around can kill you if it knows you don't belong here."
+    n "Even if you consider her a friend already, we must leave as soon as possible."
+    n "Remember the J-414 records."
+    y "What did they say?"
+    n "Augh c'mon you READ it."
+    y "I don't remember that!"
+    n "The entity mingling around!!"
+    n "Yeah and you don't belong here so it can kill you if it finds out and blah blah blah."
     n "I repeat."
     n "You {b}don't{/b} belong here."
+    $renpy.pause(2)
+
+    n "You have to decide."
+    n "Either be her friend and be a disgrace to the ███ or become a bad influence to her and leave immediately."
+    n "Hsjashd we are done with the booooring part of this game."
+    n "We already reached the part Ramelden wrote as the summary of the game!"
+    n "So, EJEMPH, what are you choosing, mate?"
+
+
+label decision:
+    while True:
+        $resultado, veces_esquivado = renpy.call_screen("decisionesquiva")
+
+        if resultado == "enemy":
+            if veces_esquivado >= 5:
+                n "Did you really think I would let you click that?"
+                n "You even wasted your time trying to click it."
+                n "Watching you struggle was so funny Hasdjsdjh"
+                n "Anyway, let's proceed."
+                y "But I wanted to be her friend!"
+                n "You really think you can be friends with someone you had to betray from the very beginning?"
+                n "It's like trying to be friends with someone who was your lover."
+                n "Remember my children! This is no dating sim!"
+            jump renemy
+        
+
+label renemy:
+    "en espera wait wait"
+
 
 
 

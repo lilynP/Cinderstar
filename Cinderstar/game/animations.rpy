@@ -55,3 +55,7 @@ transform button6():
     xpos -50
     pause 1.0
     linear 0.5 xpos 0 alpha 1.0
+
+transform movimiento_suave(posx, posy):
+    
+    ease 0.15 xpos posx ypos posy

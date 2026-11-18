@@ -1689,3 +1689,21 @@ screen confirmbutton():
                 textbutton _("Quit game") action Quit(confirm=False)
                 textbutton _("Quit to main menu") action MainMenu(confirm=False)
                 textbutton _("No          ") action Null
+
+screen decisionesquiva():
+    style_prefix "choice"
+    default posx = 750
+    default posy = 440
+    default esquives = 0
+
+    fixed:
+        add Solid("#000000AA")
+
+        textbutton "Become her enemy":
+            xalign 0.5 yalign 0.7
+            action Return(("enemy", esquives))
+        textbutton "Become her friend":
+            at movimiento_suave(posx, posy)
+            hovered [SetScreenVariable("esquives", esquives + 1), SetScreenVariable("posx", renpy.random.randint(100, 1600)), SetScreenVariable("posy", renpy.random.randint(100,800))]
+
+            action NullAction()
