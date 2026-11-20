@@ -60,20 +60,7 @@ init python:
         renpy.notify("New finding! " + pista_texto)
 
 
-#for the trembling movement
 
-transform constant_shake:
-    subpixel True
-    # Randomizes the offset slightly every 0.05 seconds
-    choice:
-        linear 0.05 xoffset 5 yoffset -5
-    choice:
-        linear 0.05 xoffset -5 yoffset 5
-    choice:
-        linear 0.05 xoffset -3 yoffset -3
-    choice:
-        linear 0.05 xoffset 5 yoffset 3
-    repeat
 
 # The script of the game goes in this file.
 
@@ -1578,12 +1565,90 @@ label decision:
                 y "But I wanted to be her friend!"
                 n "You really think you can be friends with someone you had to betray from the very beginning?"
                 n "It's like trying to be friends with someone who was your lover."
-                n "Remember my children! This is no dating sim!"
+                n "Remember! This is no dating sim!"
             jump renemy
         
 
 label renemy:
-    "en espera wait wait"
+    scene fondoo
+    show ssonriente
+    stop music
+    play music "audio/horrormusic.mp3"
+    n "Great job! Now he will be grateful for this, now go!"
+    y "Hey umm..."
+    y "Don't you sometimes feel that your thankfulness has become a prison to you?"
+    s "Sorry what?"
+    y "I mean you said that we should be grateful about everything. Don't you think it can become a prison?"
+    hide ssonriente
+    show sincomoda
+    s "Why a prison? haha..."
+    y "You also mentioned something about your father right?"
+    s "I don't think so..."
+    hide sincomoda
+    show snerviosa
+    y "You said your father gave you this body and all right?"
+    s "Of course...!"
+    hide snerviosa
+    show sincomoda
+    scene fondooevil
+    show sincomoda
+    y "Well, what if when you are at the play and he claps, he claps for the play only?"
+    y "And not his DAUGHTER?"
+    s "Haha silly, what are you even saying? Haha..."
+    s "My father loves me so much..."
+    s "He literally stitched me with all his effort and saved me...!"
+    s "You can't just assume something like that...We are friends."
+    
+    y "You trust someone who just came in and interviewed you as a job and you consider them a friend?"
+    y "You must have very low self esteem."
+    y "Pretty contradictory for an actress like you."
+    y "Or the actress you claim to be."
+    s "But we talked and...!{nw=0.5}"
+    y "Haven't your {b}real{/b} parents warned you about strangers?"
+    y "I AM a stranger. How come you don't realize I don't come from here?"
+    s "WHAT?" with vpunch
+    y "I am an agent helper, Schell. That's my job. My {sc=5}REAL{/sc} job."
+    scene fondooevil1
+    show sincomoda
+    y "To betray others who think I am interested in them."
+    y "That smile of yours, isn't it fake?"
+    stop music
+    s "..."
+    s "..."
+    y "I must admit, you are a great actress." 
+    y "You even showed me a different side of yours when we first started talking and now you're probably not even feeling bad about what I am saying."
+    y "But returning to your smile...Do you force it? Is it genuine? Or a well fabricated lie?"
+    s "STOP IT! You're so mean...!" with vpunch
+    s "SECURITY-!{nw=0.2}"
+    y "They can't hear you." with vpunch
+    y "Not anymore."
+    s "Gah!"
+    y "Perhaps that question was a bit out of context hmmm, but I need to keep interviewing you."
+    s "NO! I DON'T WANT TO KEEP UP WITH THIS...!"
+    #trata de salir por la puerta pero no puede (nueva escena tirada en el suelo mirando hacia arriba)
+    y "Perhaps you being tired at times represents your humanity, the fact that you're still a human."
+    y "Even if you're a naked meat moving piece."
+    s "WHAT DID YOU SAY TO ME?" with vpunch
+    y "Now, let me ask you a final question."
+    y "If tomorrow, everyone would stop looking for your thanks and at the same time thanking you, would you still go on that stage?"
+    y "If the answer takes long to come from your mouth..."
+    y "It's because your belief is not love. Or a passion."
+    y "It's just a devilish lie with a nice face."
+    hide sincomoda
+    show sgiffany at center, constant_shake
+    s "..."
+    s "..."
+    s "Why are you doing this to me?"
+    y "I am just trying to interview you."
+    y "Oh, and now that you just mentioned we are friends..."
+    y "I believe friends can ask more profound questions, can't they?"
+    y "Rather than the chitchat we were spitting earlier."
+    s "{sc=5}Y-you...{/sc}"
+    s "{sc=5}You're straight up fake...{/sc}"
+    s "{sc=5} Even if I tell you to stop you just DON'T!!{/sc}"
+    s "{sc=5}I can't stand you anymore...{/sc}"
+    s "{sc=5}And you are telling me this right when I am going on stage in some time...{/sc}"
+    s "{sc=5}{size=*3}YOU ARE DISGUSTING.{/size}{/sc}"
 
 
 

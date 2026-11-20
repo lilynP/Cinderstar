@@ -59,3 +59,18 @@ transform button6():
 transform movimiento_suave(posx, posy):
     
     ease 0.15 xpos posx ypos posy
+
+#for the trembling movement
+
+transform constant_shake:
+    subpixel True
+    # Randomizes the offset slightly every 0.05 seconds
+    choice:
+        linear 0.05 xoffset 5 yoffset -5
+    choice:
+        linear 0.05 xoffset -5 yoffset 5
+    choice:
+        linear 0.05 xoffset -3 yoffset -3
+    choice:
+        linear 0.05 xoffset 5 yoffset 3
+    repeat
