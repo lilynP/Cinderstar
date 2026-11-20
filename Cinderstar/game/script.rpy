@@ -1543,7 +1543,7 @@ label resumen:
     n "Yeah and you don't belong here so it can kill you if it finds out and blah blah blah."
     n "I repeat."
     n "You {b}don't{/b} belong here."
-    $renpy.pause(2)
+    
 
     n "You have to decide."
     n "Either be her friend and be a disgrace to the ███ or become a bad influence to her and leave immediately."
@@ -1591,7 +1591,7 @@ label renemy:
     hide snerviosa
     show sincomoda
     scene fondooevil
-    show sincomoda
+    show sincomoda at center, constant_shake
     y "Well, what if when you are at the play and he claps, he claps for the play only?"
     y "And not his DAUGHTER?"
     s "Haha silly, what are you even saying? Haha..."
@@ -1621,16 +1621,19 @@ label renemy:
     y "I must admit, you are a great actress." 
     y "You even showed me a different side of yours when we first started talking and now you're probably not even feeling bad about what I am saying."
     y "But returning to your smile...Do you force it? Is it genuine? Or a well fabricated lie?"
+    hide sgiffany
+    show smolestaojoabierto
     s "STOP IT! You're so mean...!" with vpunch
     s "SECURITY-!{nw=0.2}"
     y "They can't hear you." with vpunch
-    y "Not anymore."
+    hide smolestaojoabierto
+    show scelestia
     s "Gah!"
     y "Perhaps that question was a bit out of context hmmm, but I need to keep interviewing you."
-    s "NO! I DON'T WANT TO KEEP UP WITH THIS...!"
     y "Perhaps you being tired at times represents your humanity, the fact that you're still a human."
-    y "Even if you're a naked meat moving piece."
-    show scelestia1
+    y "{b}Even if you're a naked meat moving piece.{/b}"
+    hide scelestia
+    show scelestia1 at center, constant_shake 
     s "WHAT DID YOU SAY TO ME?" with vpunch
     y "Now, let me ask you a final question."
     y "If tomorrow, everyone would stop looking for your thanks and at the same time thanking you, would you still go on that stage?"
@@ -1640,15 +1643,16 @@ label renemy:
     show scelestia
     y "It's just a devilish lie with a nice face."
     hide sincomoda
-    #cara de perfil, pero como sudosa y que se le noten los hilos de la cara, mirando hacia abajo
+    scene sperfil2
     s "..."
     s "..."
-    #cara de perfil, pero como sudosa y que se le noten los hilos de la cara, ahora mirando como a los ojos
+    scene sperfil1
     s "Why are you doing this to me?"
     y "I am just trying to interview you."
     y "Oh, and now that you just mentioned we are friends..."
     y "I believe friends can ask more profound questions, can't they?"
     y "Rather than the chitchat we were spitting earlier."
+    scene sperfil1 at constant_shake
     s "{sc=5}Y-you...{/sc}"
     s "{sc=5}You're straight up fake...{/sc}"
     s "{sc=5} Even if I tell you to stop you just DON'T!!{/sc}"
