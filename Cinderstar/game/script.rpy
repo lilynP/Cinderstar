@@ -1606,10 +1606,13 @@ label renemy:
     s "But we talked and...!{nw=0.5}"
     y "Haven't your {b}real{/b} parents warned you about strangers?"
     y "I AM a stranger. How come you don't realize I don't come from here?"
+    hide sincomoda
+    show scelestia2
     s "WHAT?" with vpunch
     y "I am an agent helper, Schell. That's my job. My {sc=5}REAL{/sc} job."
     scene fondooevil1
-    show sincomoda
+    hide scelestia2
+    show sgiffany
     y "To betray others who think I am interested in them."
     y "That smile of yours, isn't it fake?"
     stop music
@@ -1625,19 +1628,22 @@ label renemy:
     s "Gah!"
     y "Perhaps that question was a bit out of context hmmm, but I need to keep interviewing you."
     s "NO! I DON'T WANT TO KEEP UP WITH THIS...!"
-    #trata de salir por la puerta pero no puede (nueva escena tirada en el suelo mirando hacia arriba)
     y "Perhaps you being tired at times represents your humanity, the fact that you're still a human."
     y "Even if you're a naked meat moving piece."
+    show scelestia1
     s "WHAT DID YOU SAY TO ME?" with vpunch
     y "Now, let me ask you a final question."
     y "If tomorrow, everyone would stop looking for your thanks and at the same time thanking you, would you still go on that stage?"
     y "If the answer takes long to come from your mouth..."
     y "It's because your belief is not love. Or a passion."
+    hide scelestia1
+    show scelestia
     y "It's just a devilish lie with a nice face."
     hide sincomoda
-    show sgiffany at center, constant_shake
+    #cara de perfil, pero como sudosa y que se le noten los hilos de la cara, mirando hacia abajo
     s "..."
     s "..."
+    #cara de perfil, pero como sudosa y que se le noten los hilos de la cara, ahora mirando como a los ojos
     s "Why are you doing this to me?"
     y "I am just trying to interview you."
     y "Oh, and now that you just mentioned we are friends..."
