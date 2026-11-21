@@ -1351,7 +1351,7 @@ label relojenlapared:
                     s "Thanks to these ladies I am stitched well!"
                     s "Let me show you all my strong and beautiful threads!"
                     hide soh
-                    scene scuerdas
+                    scene sthreads with fade
                     
                     
                     s "These are the reasons why I can bring you all my amazing superb marvelous plays!"
@@ -1574,9 +1574,12 @@ label renemy:
     show ssonriente
     stop music
     play music "audio/horrormusic.mp3"
+    n "Woah!!"
     n "Great job! Now he will be grateful for this, now go!"
     y "Hey umm..."
     y "Don't you sometimes feel that your thankfulness has become a prison to you?"
+    hide ssonriente
+    show snerviosa
     s "Sorry what?"
     y "I mean you said that we should be grateful about everything. Don't you think it can become a prison?"
     hide ssonriente
@@ -1591,9 +1594,10 @@ label renemy:
     hide snerviosa
     show sincomoda
     scene fondooevil
-    show sincomoda at center, constant_shake
+    show sincomoda
     y "Well, what if when you are at the play and he claps, he claps for the play only?"
     y "And not his DAUGHTER?"
+    show sincomoda at center, constant_shake
     s "Haha silly, what are you even saying? Haha..."
     s "My father loves me so much..."
     s "He literally stitched me with all his effort and saved me...!"
@@ -1606,6 +1610,7 @@ label renemy:
     s "But we talked and...!{nw=0.5}"
     y "Haven't your {b}real{/b} parents warned you about strangers?"
     y "I AM a stranger. How come you don't realize I don't come from here?"
+    hide sincomoda
     hide sincomoda
     show scelestia2
     s "WHAT?" with vpunch
@@ -1626,9 +1631,10 @@ label renemy:
     s "STOP IT! You're so mean...!" with vpunch
     s "SECURITY-!{nw=0.2}"
     y "They can't hear you." with vpunch
+    play music "audio/horrormusic.mp3" volume 3.0
     hide smolestaojoabierto
     show scelestia
-    s "Gah!"
+    s "Gah!" with vpunch
     y "Perhaps that question was a bit out of context hmmm, but I need to keep interviewing you."
     y "Perhaps you being tired at times represents your humanity, the fact that you're still a human."
     y "{b}Even if you're a naked meat moving piece.{/b}"
@@ -1643,16 +1649,16 @@ label renemy:
     show scelestia
     y "It's just a devilish lie with a nice face."
     hide sincomoda
-    scene sperfil2
-    s "..."
-    s "..."
     scene sperfil1
+    s "..."
+    s "..."
+    scene sperfil2
     s "Why are you doing this to me?"
     y "I am just trying to interview you."
     y "Oh, and now that you just mentioned we are friends..."
     y "I believe friends can ask more profound questions, can't they?"
     y "Rather than the chitchat we were spitting earlier."
-    scene sperfil1 at constant_shake
+    scene sperfil2 at constant_shake
     s "{sc=5}Y-you...{/sc}"
     s "{sc=5}You're straight up fake...{/sc}"
     s "{sc=5} Even if I tell you to stop you just DON'T!!{/sc}"
