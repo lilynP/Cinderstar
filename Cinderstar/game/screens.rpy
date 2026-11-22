@@ -1707,3 +1707,40 @@ screen decisionesquiva():
             hovered [SetScreenVariable("esquives", esquives + 1), SetScreenVariable("posx", renpy.random.randint(100, 1600)), SetScreenVariable("posy", renpy.random.randint(100,800))]
 
             action NullAction()
+
+screen content_warning():
+    modal True
+
+    add Solid("#000000AA")
+
+    frame:
+        xalign 0.5
+        yalign 0.5
+        xsize 1000
+        ysize 600
+        background Frame("gui/overlay/game_menu.png")
+
+        vbox:
+            xalign 0.5
+            yalign 0.5
+            spacing 80
+
+            text '{size=40}This game may contain scary imagery and sound. \nDo you wish to proceed?{/size=40}':
+                xalign 0.5
+                text_align 0.5
+                xsize 800
+            hbox:
+                xalign 0.5
+                spacing 100
+                textbutton "Yes":
+                    text_size 35
+                    background Frame("gui/button/choice_idle_background.png", 20,20)
+                    hover_background Frame("gui/button/choice_hover_background.png", 20, 20)
+                    padding (40,20)
+                    action [Hide("content_warning"), Return(True), With(dissolve)]
+                textbutton "No":
+                    text_size 35
+                    background Frame("gui/button/choice_idle_background.png", 20,20)
+                    hover_background Frame("gui/button/choice_hover_background.png", 20,20)
+                    padding(40,20)
+                    action Quit(confirm=False)

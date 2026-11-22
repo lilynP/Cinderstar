@@ -54,10 +54,31 @@ init python:
             #optional: play a line finished click to continue sound
             renpy.sound.play("audio/typewriter1.mp3", channel = "sound")    
 
-#for the notify thingy
+#for the notify thing on the top left
 init python:
     def notificar(pista_texto):
         renpy.notify("New finding! " + pista_texto)
+
+# for the content warning
+
+label before_main_menu:
+
+    scene black with Pause(1)
+
+    show text "A story by Ramelden" at truecenter with dissolve
+    with Pause(2)
+
+    hide text with dissolve
+    with Pause(1)
+
+    $ persistent.shown_warning = False 
+
+    if not persistent.shown_warning:
+        # Show warning here
+        $ persistent.shown_warning = True
+        call screen content_warning with dissolve
+
+    return
 
 
 
