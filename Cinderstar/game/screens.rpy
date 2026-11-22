@@ -1655,13 +1655,14 @@ screen menu_reloj():
         yanchor 0.5
         spacing 15
 
-        textbutton "I want to know what you keep inside your drawers" action Jump("askdrawers")
-        textbutton "I want to know about the leg mannequins on the corner." action Jump("maniquies")
+        # Añadido _() a las opciones del menú
+        textbutton _("I want to know what you keep inside your drawers") action Jump("askdrawers")
+        textbutton _("I want to know about the leg mannequins on the corner.") action Jump("maniquies")
 
         if reloj_desbloqueado:
-            textbutton "I want to know about the clock thing you have on the wall." action Jump("relojenlapared")
+            textbutton _("I want to know about the clock thing you have on the wall.") action Jump("relojenlapared")
         else:
-            textbutton "I want to know about the clock thing you have on the wall.":
+            textbutton _("I want to know about the clock thing you have on the wall."):
                 action NullAction()
                 text_color "#808080"
                 text_hover_color "#808080"
@@ -1679,6 +1680,7 @@ screen confirmbutton():
             xalign .5
             yalign .5
             spacing 45
+            
             label _("Are you sure you want to quit?"):
                 style "confirm_prompt"
                 xalign 0.5
@@ -1686,9 +1688,11 @@ screen confirmbutton():
             hbox:
                 xalign 0.5
                 spacing 100
+                # Los botones ya tenían _()
                 textbutton _("Quit game") action Quit(confirm=False)
                 textbutton _("Quit to main menu") action MainMenu(confirm=False)
                 textbutton _("No          ") action Null
+
 
 screen decisionesquiva():
     style_prefix "choice"
@@ -1699,14 +1703,17 @@ screen decisionesquiva():
     fixed:
         add Solid("#000000AA")
 
-        textbutton "Become her enemy":
+        
+        textbutton _("Become her enemy"):
             xalign 0.5 yalign 0.7
             action Return(("enemy", esquives))
-        textbutton "Become her friend":
+            
+        textbutton _("Become her friend"):
             at movimiento_suave(posx, posy)
             hovered [SetScreenVariable("esquives", esquives + 1), SetScreenVariable("posx", renpy.random.randint(100, 1600)), SetScreenVariable("posy", renpy.random.randint(100,800))]
 
             action NullAction()
+
 
 screen content_warning():
     modal True
@@ -1725,20 +1732,24 @@ screen content_warning():
             yalign 0.5
             spacing 80
 
-            text '{size=40}This game may contain scary imagery and sound. \nDo you wish to proceed?{/size=40}':
+            # Envolvemos el texto con _() cuidando que las etiquetas {size} queden por fuera o por dentro correctamente
+            text _('{size=40}This game may contain scary imagery and sound. \nDo you wish to proceed?{/size=40}'):
                 xalign 0.5
                 text_align 0.5
                 xsize 800
+                
             hbox:
                 xalign 0.5
                 spacing 100
-                textbutton "Yes":
+                
+                textbutton _("Yes"):
                     text_size 35
                     background Frame("gui/button/choice_idle_background.png", 20,20)
                     hover_background Frame("gui/button/choice_hover_background.png", 20, 20)
                     padding (40,20)
                     action [Hide("content_warning"), Return(True), With(dissolve)]
-                textbutton "No":
+                    
+                textbutton _("No"):
                     text_size 35
                     background Frame("gui/button/choice_idle_background.png", 20,20)
                     hover_background Frame("gui/button/choice_hover_background.png", 20,20)

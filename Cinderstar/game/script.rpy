@@ -74,13 +74,18 @@ label before_main_menu:
     $ persistent.shown_warning = False 
 
     if not persistent.shown_warning:
-        # Show warning here
+        
         $ persistent.shown_warning = True
         call screen content_warning with dissolve
 
     return
 
+#for the language selection
 
+label splashscreen:
+    if not persistent.language_chosen:
+        call screen language_choice
+    return
 
 
 # The script of the game goes in this file.
