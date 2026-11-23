@@ -1075,7 +1075,7 @@ label relojenlapared:
                     show strescuartos
                     s "Anyway."
                     s "This interview is about me so I couldn't care less."
-            y "Yeah so tell me, why are all of the numers 11s?"
+            y "Yeah so tell me, why are all of the numbers 11s?"
             hide strescuartos
             hide ssonriente
             show soh
@@ -1492,7 +1492,7 @@ label resumen:
         $points +=1
     
     if johncage:
-        n "As I mentioned before, did you notice that she mention Jhonnas Craige?"
+        n "As I mentioned before, did you notice that she mentioned Jhonnas Craige?"
         n "Her family must have been an art enthusiast to know him and probably respect him."
         n "Even if I dislike his 'music' blehhh..."
         y "I think all art should be respected, don't be rude."
@@ -1542,7 +1542,7 @@ label resumen:
         $points +=1
     
     if father:
-        n "And yeah, who is 'father'? If he was the doctor, whatever he is, he must have been a good one."
+        n "And yeah, who is 'father'? If he was a doctor, whatever he is, he must have been a good one."
         n "Probably one who had an obsession with dolls."
         n "Haven't you read something about it at the secret room behind the yellow door at the B building?"
         n "If he was from the other ground he must have been an assasin."
