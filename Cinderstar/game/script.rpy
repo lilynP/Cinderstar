@@ -165,7 +165,7 @@ label start:
     y "Why am I here?"
     hide vladan2
     show vladan3
-    v "You have been selected for the code 45590-bqn mission"
+    v "You have been selected for mission 45590-bqn"
     v "You OUGHT to finish it"
     hide vladan3
     show vladan2
@@ -232,7 +232,7 @@ label start:
     show vladan3
     v "Don't you dare disappoint"
     hide vladan3 with dissolve
-    "His voice resonates in your mind like some church bell"
+    "His voice resonates in your mind like a church bell"
     "Your conciousness starts fading..."
     
     "And you finally close your eyes...{w}Again.{w=1.0}"
@@ -515,7 +515,7 @@ label menupreguntasprincipales1:
                     hide strescuartos
                     show snerviosa
                     $renpy.pause(2)
-                    n "That 2 second pause was her being uncomfortable with a presence that is SUPPOSED to make her comfortable with fun questions."
+                    n "That 2-second pause was her being uncomfortable with a presence that is SUPPOSED to make her comfortable with fun questions."
                     s "So..."
                     n "She's probably gonna ask something to keep the conversation"
                     n "I knew you were bad at this, but you are BAD BAD"
@@ -879,7 +879,7 @@ label lightbulbdemos:
                             $reloj_desbloqueado = True
                             jump menupreguntasprincipales
 
-                        "That was another one, right? Sorry, just keep going...":
+                        "That was another joke, right? Sorry, just keep going...":
                             hide sdisgusto
                             play sound "audio/correct.wav" volume 0.5
                             show sexplicando1
@@ -1545,7 +1545,7 @@ label resumen:
         n "And yeah, who is 'father'? If he was a doctor, whatever he is, he must have been a good one."
         n "Probably one who had an obsession with dolls."
         n "Haven't you read something about it at the secret room behind the yellow door at the B building?"
-        n "If he was from the other ground he must have been an assasin."
+        n "If he was from the other ground he must have been an assassin."
         n "Like the Black Dahlia case or something."
         y "That doesn't make any sense!"
         $points +=1
@@ -1593,6 +1593,7 @@ label decision:
                 n "It's like trying to be friends with someone who was your lover."
                 n "Remember! This is no dating sim!"
             jump renemy
+    jump renemy
         
 
 label renemy:
