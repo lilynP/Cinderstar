@@ -4,5 +4,5 @@ translate spanish strings:
 
     # game/options.rpy:18
     old "The Cinderstar"
-    new ""
+    new "The Cinderstar"
 

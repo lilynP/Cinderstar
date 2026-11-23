@@ -3604,639 +3604,639 @@ translate spanish resumen_b0e6fd63:
 translate spanish resumen_9e71399c:
 
     # n "I repeat."
-    n ""
+    n "Repito."
 
 # game/script.rpy:1571
 translate spanish resumen_543128bd:
 
     # n "You {b}don't{/b} belong here."
-    n ""
+    n "{b}No{/b} perteneces aquí."
 
 # game/script.rpy:1574
 translate spanish resumen_db7e23bd:
 
     # n "You have to decide."
-    n ""
+    n "Tienes que decidir."
 
 # game/script.rpy:1575
 translate spanish resumen_40d27050:
 
     # n "Either be her friend and be a disgrace to the ███ or become a bad influence to her and leave immediately."
-    n ""
+    n "Puedes ser o su grann amistad y ser una desgracia para la ███ o volverte una mala influencia para ella e irte inmediatamente."
 
 # game/script.rpy:1576
 translate spanish resumen_df177a62:
 
     # n "Hsjashd we are done with the booooring part of this game."
-    n ""
+    n "Hajsjdahd ya pasamos la parte aburrida de este juego."
 
 # game/script.rpy:1577
 translate spanish resumen_2081a674:
 
     # n "We already reached the part Ramelden wrote as the summary of the game!"
-    n ""
+    n "¡Ya hemos llegado a la parte en la que Ramelden escribió como sinopsis de este juego!"
 
 # game/script.rpy:1578
 translate spanish resumen_8087a4b7:
 
     # n "So, EJEMPH, what are you choosing, mate?"
-    n ""
+    n "Así que, EJEMPH, ¿Qué decides?"
 
 # game/script.rpy:1587
 translate spanish decision_466405a2:
 
     # n "Did you really think I would let you click that?"
-    n ""
+    n "¿En serio pensaste que te dejaría presionar ese botón?"
 
 # game/script.rpy:1588
 translate spanish decision_79cfefa5:
 
     # n "You even wasted your time trying to click it."
-    n ""
+    n "Inclusive perdiste tu tiempo tratando de presionarlo."
 
 # game/script.rpy:1589
 translate spanish decision_37e74b68:
 
     # n "Watching you struggle was so funny Hasdjsdjh"
-    n ""
+    n "Verte esforzarte fue muy divertido Jasjdasdkj "
 
 # game/script.rpy:1590
 translate spanish decision_4c7c646a:
 
     # n "Anyway, let's proceed."
-    n ""
+    n "En fin, hay que seguir."
 
 # game/script.rpy:1591
 translate spanish decision_8f5231a3:
 
     # y "But I wanted to be her friend!"
-    y ""
+    y "¡Pero yo quería hacer amigos con ella!"
 
 # game/script.rpy:1592
 translate spanish decision_18cdce7d:
 
     # n "You really think you can be friends with someone you had to betray from the very beginning?"
-    n ""
+    n "¿En serio pensaste qeu serías amigos con alguien que tuviste que traicionar desde el comienzo?"
 
 # game/script.rpy:1593
 translate spanish decision_2ee549e9:
 
     # n "It's like trying to be friends with someone who was your lover."
-    n ""
+    n "Es como tratar de ser amigos con alguien que fue tu amante."
 
 # game/script.rpy:1594
 translate spanish decision_d7979e8a:
 
     # n "Remember! This is no dating sim!"
-    n ""
+    n "¡Recuerda! ¡Este no es un simulador de citas!"
 
 # game/script.rpy:1603
 translate spanish renemy_69fe5724:
 
     # n "Woah!!"
-    n ""
+    n "¡¡Woah!!"
 
 # game/script.rpy:1604
 translate spanish renemy_3fd8cad6:
 
     # n "Great job! Now he will be grateful for this, now go!"
-    n ""
+    n "¡¡Buen trabajo!! Ahora él sí estará agradecido por esto, ahora ve."
 
 # game/script.rpy:1605
 translate spanish renemy_34c40104:
 
     # y "Hey umm..."
-    y ""
+    y "Oye ermm..."
 
 # game/script.rpy:1606
 translate spanish renemy_f27acbca:
 
     # y "Don't you sometimes feel that your thankfulness has become a prison to you?"
-    y ""
+    y "¿A veces no crees que esa gratitud se ha vuelto una prisión para ti?"
 
 # game/script.rpy:1609
 translate spanish renemy_3228dd92:
 
     # s "Sorry what?"
-    s ""
+    s "Disculpa, ¿qué?"
 
 # game/script.rpy:1610
 translate spanish renemy_48ff3b28:
 
     # y "I mean you said that we should be grateful about everything. Don't you think it can become a prison?"
-    y ""
+    y "O sea dijiste que deberíamos estar agradecidos por todo. ¿No crees que eso se convertiría en una prisión?"
 
 # game/script.rpy:1613
 translate spanish renemy_b7d25d21:
 
     # s "Why a prison? haha..."
-    s ""
+    s "¿Por qué una prisión? jaja..."
 
 # game/script.rpy:1614
 translate spanish renemy_a4e27db7:
 
     # y "You also mentioned something about your father right?"
-    y ""
+    y "También mencionaste algo sobre tu padre, ¿verdad?"
 
 # game/script.rpy:1615
 translate spanish renemy_e41586ad:
 
     # s "I don't think so..."
-    s ""
+    s "No lo creo..."
 
 # game/script.rpy:1618
 translate spanish renemy_f10a32c5:
 
     # y "You said your father gave you this body and all right?"
-    y ""
+    y "Tú dijiste que tu padre te dio este cuerpo y todo, ¿verdad?"
 
 # game/script.rpy:1619
 translate spanish renemy_e4e3a955:
 
     # s "Of course...!"
-    s ""
+    s "¡Pues claro...!"
 
 # game/script.rpy:1624
 translate spanish renemy_38064b4e:
 
     # y "Well, what if when you are at the play and he claps, he claps for the play only?"
-    y ""
+    y "Bueno, ¿qué pasa si cuando tú estás en la actuación y él aplaude, él aplaude pero solo por la actuación?"
 
 # game/script.rpy:1625
 translate spanish renemy_a7cfe3dc:
 
     # y "And not his DAUGHTER?"
-    y ""
+    y "¿Y no su HIJA?"
 
 # game/script.rpy:1627
 translate spanish renemy_0847881f:
 
     # s "Haha silly, what are you even saying? Haha..."
-    s ""
+    s "Jaja, tonterías, ¿qué estás diciendo? Jaja..."
 
 # game/script.rpy:1628
 translate spanish renemy_d699e491:
 
     # s "My father loves me so much..."
-    s ""
+    s "Mi padre me ama muchísimo..."
 
 # game/script.rpy:1629
 translate spanish renemy_5296e270:
 
     # s "He literally stitched me with all his effort and saved me...!"
-    s ""
+    s "¡Literalmente me cosió con todo su esfuerzo y me salvó...!"
 
 # game/script.rpy:1630
 translate spanish renemy_f65f64dc:
 
     # s "You can't just assume something like that...We are friends."
-    s ""
+    s "No puedes solamente asumir algo como eso...Somos amigos."
 
 # game/script.rpy:1632
 translate spanish renemy_663b09fc:
 
     # y "You trust someone who just came in and interviewed you as a job and you consider them a friend?"
-    y ""
+    y "¿Confías en alguien que acababa de venir y te entrevistó como parte de su trabajo y ya lo consideras amistad tuya?"
 
 # game/script.rpy:1633
 translate spanish renemy_79772243:
 
     # y "You must have very low self esteem."
-    y ""
+    y "Debes tener muy baja autoestima."
 
 # game/script.rpy:1634
 translate spanish renemy_f6586e30:
 
     # y "Pretty contradictory for an actress like you."
-    y ""
+    y "Muy contradictorio para una actriz como tú."
 
 # game/script.rpy:1635
 translate spanish renemy_b563d95f:
 
     # y "Or the actress you claim to be."
-    y ""
+    y "O la actriz que dices ser."
 
 # game/script.rpy:1636
 translate spanish renemy_4f3c3b24:
 
     # s "But we talked and...!{nw=0.5}"
-    s ""
+    s "¡Pero hemos hablado y...!{nw=0.5}"
 
 # game/script.rpy:1637
 translate spanish renemy_4bcb251e:
 
     # y "Haven't your {b}real{/b} parents warned you about strangers?"
-    y ""
+    y "¿Acaso tus padres {b}reales{/b} no te advirtieron sobre los extraños?"
 
 # game/script.rpy:1638
 translate spanish renemy_18e1171e:
 
     # y "I AM a stranger. How come you don't realize I don't come from here?"
-    y ""
+    y "Yo SOY un extraño. ¿Cómo así no te has dado cuenta que no vengo de aquí?"
 
 # game/script.rpy:1642
 translate spanish renemy_39a6a5a7:
 
     # s "WHAT?" with vpunch
-    s "" with vpunch
+    s "¿QUÉ?" with vpunch
 
 # game/script.rpy:1643
 translate spanish renemy_17e9dcdb:
 
     # y "I am an agent helper, Schell. That's my job. My {sc=5}REAL{/sc} job."
-    y ""
+    y "Soy un ayudante de un agente, Schell. Ese es mi trabajo. Mi {sc=5}REAL{/sc} trabajo."
 
 # game/script.rpy:1647
 translate spanish renemy_42a34a9a:
 
     # y "To betray others who think I am interested in them."
-    y ""
+    y "Traicionar a otros que creen que me interesan."
 
 # game/script.rpy:1648
 translate spanish renemy_08f2b6e0:
 
     # y "That smile of yours, isn't it fake?"
-    y ""
+    y "Esa sonrisa tuya, ¿no es falsa?"
 
 # game/script.rpy:1650
 translate spanish renemy_e1554201:
 
     # s "..."
-    s ""
+    s "..."
 
 # game/script.rpy:1651
 translate spanish renemy_e1554201_1:
 
     # s "..."
-    s ""
+    s "..."
 
 # game/script.rpy:1652
 translate spanish renemy_9c24066c:
 
     # y "I must admit, you are a great actress."
-    y ""
+    y "Debo admitirlo, eres una gran actriz."
 
 # game/script.rpy:1653
 translate spanish renemy_55f3f2d2:
 
     # y "You even showed me a different side of yours when we first started talking and now you're probably not even feeling bad about what I am saying."
-    y ""
+    y "Inclusive me mostraste un lado diferente de ti cuando empezamos a hablar y ahora probablemente ni siquiera te estás sientiendo mal por lo que estoy diciendo."
 
 # game/script.rpy:1654
 translate spanish renemy_34593353:
 
     # y "But returning to your smile...Do you force it? Is it genuine? Or a well fabricated lie?"
-    y ""
+    y "Pero retornando a tu sonrisa...¿La fuerzas? ¿Es genuina? ¿O una mentira bien fabricada?"
 
 # game/script.rpy:1657
 translate spanish renemy_18bb26f6:
 
     # s "STOP IT! You're so mean...!" with vpunch
-    s "" with vpunch
+    s "¡PARA! ¡ERES MUY CRUEL...! " with vpunch
 
 # game/script.rpy:1658
 translate spanish renemy_0a501b11:
 
     # s "SECURITY-!{nw=0.2}"
-    s ""
+    s "¡SEGURIDAD-!{nw=0.2}"
 
 # game/script.rpy:1659
 translate spanish renemy_6183d82c:
 
     # y "They can't hear you." with vpunch
-    y "" with vpunch
+    y "No pueden escucharte." with vpunch
 
 # game/script.rpy:1663
 translate spanish renemy_fdd7273e:
 
     # s "Gah!" with vpunch
-    s "" with vpunch
+    s "¡GAH!" with vpunch
 
 # game/script.rpy:1664
 translate spanish renemy_15fe3a6b:
 
     # y "Perhaps that question was a bit out of context hmmm, but I need to keep interviewing you."
-    y ""
+    y "Tal vez esa pregunta estuvo un poco fuera de contexto hmmm, pero necesito seguir entrevistándote."
 
 # game/script.rpy:1665
 translate spanish renemy_c729737e:
 
     # y "Perhaps you being tired at times represents your humanity, the fact that you're still a human."
-    y ""
+    y "Tal vez tú estando cansada a veces representa tu humanidad, el hecho que aún eres una humana."
 
 # game/script.rpy:1666
 translate spanish renemy_77e95980:
 
     # y "{b}Even if you're a naked meat moving piece.{/b}"
-    y ""
+    y "{b}Aunque seas una pieza de carne desnuda que se mueve.{/b}"
 
 # game/script.rpy:1669
 translate spanish renemy_bea55892:
 
     # s "WHAT DID YOU SAY TO ME?" with vpunch
-    s "" with vpunch
+    s "¿QUÉ ME HAS DICHO?" with vpunch
 
 # game/script.rpy:1670
 translate spanish renemy_8b54277d:
 
     # y "Now, let me ask you a final question."
-    y ""
+    y "Ahora, déjame preguntarte una última cosa."
 
 # game/script.rpy:1671
 translate spanish renemy_f5605dd4:
 
     # y "If tomorrow, everyone would stop looking for your thanks and at the same time thanking you, would you still go on that stage?"
-    y ""
+    y "Si mañana todos dejaran de buscar tu agradecimiento y, al mismo tiempo, de darte las gracias, ¿seguirías subiendo a ese escenario? "
 
 # game/script.rpy:1672
 translate spanish renemy_d5b7ba7d:
 
     # y "If the answer takes long to come from your mouth..."
-    y ""
+    y "Si la respuesta toma tiempo de salir de tu boca... "
 
 # game/script.rpy:1673
 translate spanish renemy_9da1f532:
 
     # y "It's because your belief is not love. Or a passion."
-    y ""
+    y "Es porque esa creencia tuya no es amor, o una pasión."
 
 # game/script.rpy:1676
 translate spanish renemy_03a5369d:
 
     # y "It's just a devilish lie with a nice face."
-    y ""
+    y "Es tan solo una mentira diabólica con una cara bonita. "
 
 # game/script.rpy:1679
 translate spanish renemy_e1554201_2:
 
     # s "..."
-    s ""
+    s "..."
 
 # game/script.rpy:1680
 translate spanish renemy_e1554201_3:
 
     # s "..."
-    s ""
+    s "..."
 
 # game/script.rpy:1682
 translate spanish renemy_05da53fd:
 
     # s "Why are you doing this to me?"
-    s ""
+    s "¿Por qué me haces esto?"
 
 # game/script.rpy:1683
 translate spanish renemy_9b2a61e5:
 
     # y "I am just trying to interview you."
-    y ""
+    y "Solo estoy tratando de entrevistarte."
 
 # game/script.rpy:1684
 translate spanish renemy_53efa7e6:
 
     # y "Oh, and now that you just mentioned we are friends..."
-    y ""
+    y "Oh, y ahora que has mencionado que somos amigos..."
 
 # game/script.rpy:1685
 translate spanish renemy_3ca4dae8:
 
     # y "I believe friends can ask more profound questions, can't they?"
-    y ""
+    y "Creo que los amigos pueden preguntar cosas más profundas, ¿no crees?"
 
 # game/script.rpy:1686
 translate spanish renemy_04bf53ce:
 
     # y "Rather than the chitchat we were spitting earlier."
-    y ""
+    y "En vez de esa cháchara que estabamos escupiendo antes."
 
 # game/script.rpy:1688
 translate spanish renemy_ca57c947:
 
     # s "{sc=5}Y-you...{/sc}"
-    s ""
+    s "{sc=5}T-Tú...{/sc}"
 
 # game/script.rpy:1689
 translate spanish renemy_825e676f:
 
     # s "{sc=5}You're straight up fake...{/sc}"
-    s ""
+    s "{sc=5}Eres completamente una farsa...{/sc}"
 
 # game/script.rpy:1690
 translate spanish renemy_43ae34b3:
 
     # s "{sc=5} Even if I tell you to stop you just DON'T!!{/sc}"
-    s ""
+    s "{sc=5}Por más que te diga que pares, ¡NO lo haces!{/sc}"
 
 # game/script.rpy:1691
 translate spanish renemy_d496ab52:
 
     # s "{sc=5}I can't stand you anymore...{/sc}"
-    s ""
+    s "{sc=5}No puedo soportarte más...{/sc}"
 
 # game/script.rpy:1692
 translate spanish renemy_c507a72d:
 
     # s "{sc=5}And you are telling me this right when I am going on stage in some time...{/sc}"
-    s ""
+    s "{sc=5}Y encima de todo me lo dices cuando voy a tener una actuación en unos momentos...{/sc}"
 
 # game/script.rpy:1693
 translate spanish renemy_adedab8e:
 
     # s "{sc=5}{size=*3}YOU ARE DISGUSTING.{/size}{/sc}"
-    s ""
+    s "{sc=5}{size=*3}ERES DESAGRADABLE.{/size}{/sc}"
 
 translate spanish strings:
 
     # game/script.rpy:272
     old "I understand"
-    new ""
+    new "Entiendo."
 
     # game/script.rpy:277
     old "You still look flawless, you know"
-    new ""
+    new "Sigues viéndote impecable"
 
     # game/script.rpy:327
     old "Return and ask something more normal"
-    new ""
+    new "Volver y preguntar algo más normal"
 
     # game/script.rpy:332
     old "Continue being a creep"
-    new ""
+    new "Continuar siendo un creep"
 
     # game/script.rpy:358
     old "{sc=5}JUST TELL ME ALREADY{/sc}"
-    new ""
+    new "{sc=5}TAN SOLO DÍMELO DE UNA VEZ{/sc}"
 
     # game/script.rpy:364
     old "{b}It's just a simple question, why the frown?{/b}"
-    new ""
+    new "{b}Es solo una pregunta sencilla, ¿por qué ese gesto de disgusto?{/b}"
 
     # game/script.rpy:407
     old "You know, you're right, my bad"
-    new ""
+    new "Sabes qué, tienes razón, mala mía"
 
     # game/script.rpy:413
     old "You know, you're right, my bad."
-    new ""
+    new "Sabes qué, tienes razón, mala mía"
 
     # game/script.rpy:428
     old "What audition? Tell me about it"
-    new ""
+    new "¿Qué audición? Cuéntame sobre ella."
 
     # game/script.rpy:455
     old "Who is Marcel?"
-    new ""
+    new "¿Quién es Marcel?"
 
     # game/script.rpy:460
     old "I promise I have! I am just forgetful!"
-    new ""
+    new "¡Te prometo que sí lo he hecho! ¡Solo tiendo a olvidarme de las cosas!"
 
     # game/script.rpy:465
     old "What's 'The lightbulb'?"
-    new ""
+    new "¿Qué es 'La bombilla'?"
 
     # game/script.rpy:486
     old "Yes. you got me there for a sec."
-    new ""
+    new "Sí, me tuviste ahí por un segundo."
 
     # game/script.rpy:488
     old "...No?"
-    new ""
+    new "...¿No?"
 
     # game/script.rpy:493
     old "OOH I remember now, sorry!"
-    new ""
+    new "OOH ya me acordé, ¡disculpa!"
 
     # game/script.rpy:511
     old "No, I have not"
-    new ""
+    new "No, no lo hice"
 
     # game/script.rpy:533
     old "Yes sure! Tell me about it."
-    new ""
+    new "Sí claro, cuéntame sobre ello."
 
     # game/script.rpy:535
     old "...Ok?"
-    new ""
+    new "...¿Ok?"
 
     # game/script.rpy:576
     old "I don't think that was funny at all..."
-    new ""
+    new "No me parece que eso haya tenido ninguna gracia..."
 
     # game/script.rpy:591
     old "Hey that's enough uhhh let's just stick to the first question, ok?"
-    new ""
+    new "Oye suficiente ahhh, limitémonos a la primera pregunta, ¿Ok? "
 
     # game/script.rpy:599
     old "I kinda am."
-    new ""
+    new "Algo así soy."
 
     # game/script.rpy:611
     old "Mmhmm!"
-    new ""
+    new "¡Mmhmm!"
 
     # game/script.rpy:631
     old "So...what you just mentioned...'The light above us doesn't work anymore' Has it happened to you before?"
-    new ""
+    new "Entonces...lo que acabas de mencionar...'La luz encima de nosotros no funciona ya?' ¿Te ha pasado alguna vez?"
 
     # game/script.rpy:670
     old "Yeah, haven't heard of it around here either...Just in books from the library..."
-    new ""
+    new "Sí, no lo he escuchado por aquí tampoco...Solo en libros de la biblioteca."
 
     # game/script.rpy:700
     old "But it is a well known language...!"
-    new ""
+    new "¡Pero es un idioma muy conocido...!"
 
     # game/script.rpy:707
     old "Oh nothing"
-    new ""
+    new "Oh nada"
 
     # game/script.rpy:709
     old "It's just that I knew before she brought me here"
-    new ""
+    new "Es solo que ya sabía desde antes que ella me trajera aquí."
 
     # game/script.rpy:820
     old "So what you are telling me until now is that 'The lightbulb's concept is forgetfullness and the fallout of love between a couple, right?"
-    new ""
+    new "Entonces me estás diciendo hasta ahora que el concepto de 'La bombilla' es olvido y desenamoramiento en una pareja, ¿verdad?"
 
     # game/script.rpy:843
     old "Wait, you don't have eyelashes?"
-    new ""
+    new "Espera, ¿no tienes pestañas?"
 
     # game/script.rpy:882
     old "That was another one, right? Sorry, just keep going..."
-    new ""
+    new "Ese fue otro de esos, ¿verdadd? Disculpa, solo sigue..."
 
     # game/script.rpy:904
     old "Is that supposed to be famous?"
-    new ""
+    new "¿Se supone que eso debe ser famoso?"
 
     # game/script.rpy:917
     old "{sc=5}What even is Concordia?{/sc}"
-    new ""
+    new "{sc=5}¿Siquiera qué es Concordia?{/sc}"
 
     # game/script.rpy:960
     old "I'm just kidding with you ma'am, it's just, you know? I am a little different."
-    new ""
+    new "Solo estoy bromeando con usted madam, Es solo que, soy un poco diferente."
 
     # game/script.rpy:992
     old "Ohh, now I can see where you are going"
-    new ""
+    new "Ohh, ahora sí ya puedo ver por dónde vas"
 
     # game/script.rpy:1054
     old "I want to ask you about the time...Why is it all 11s?"
-    new ""
+    new "Quiero preguntarte por las horas...¿Por qué todos son 11s?"
 
     # game/script.rpy:1059
     old "I never knew how to read it. That's why I brought a sand timer with me."
-    new ""
+    new "Nunca supe cómo leerlo. Es por eso que siempre traigo un reloj de arena conmigo."
 
     # game/script.rpy:1069
     old "I do have a clock, it's just that I never look at the time haha..."
-    new ""
+    new "Sí tengo un reloj, solo que nunca lo miro jaja..."
 
     # game/script.rpy:1121
     old "I want to ask you about the eye."
-    new ""
+    new "Quiero preguntarte por el ojo."
 
     # game/script.rpy:1143
     old "And the ballerina?"
-    new ""
+    new "¿Y la bailarina de ballet?"
 
     # game/script.rpy:1175
     old "{sc=5}You never looked pretty to me in the first place.{/sc}"
-    new ""
+    new "{sc=5}Nunca te me hiciste bonita en primer lugar.{/sc}"
 
     # game/script.rpy:1217
     old "Yes"
-    new ""
+    new "Sí"
 
     # game/script.rpy:1221
     old "No"
-    new ""
+    new "No"
 
     # game/script.rpy:1294
     old "{sc=5}Yes! You do look good.{/sc}"
-    new ""
+    new "{sc=5}¡Sí! Te ves muy bien.{/sc}"
 
     # game/script.rpy:1313
     old "Then what do you think it represents?"
-    new ""
+    new "¿Entonces qué crees que representa?"
 
     # game/script.rpy:1319
     old "Father? Who's 'father'?"
-    new ""
+    new "¿Padre? ¿Quién es 'padre'?"
 
     # game/script.rpy:1336
     old "And the numbers?"
-    new ""
+    new "¿Y los números?"
 
     # game/script.rpy:1353
     old "I actually do, it's just that I prefer this one."
-    new ""
+    new "Sí lo hago, solo que prefiero este."
 
     # game/script.rpy:1359
     old "No, I actually don't."
-    new ""
+    new "No, de hecho no."
 
 # TODO: Translation updated at 2026-11-22 17:59
 
@@ -4252,11 +4252,11 @@ translate spanish strings:
 translate spanish relojenlapared_68e21e61:
 
     # s "Yay! I knew you would say that! Good doggy!"
-    s ""
+    s "¡Yei! ¡Sabía que dirías eso! ¡Buen perrito!"
 
 # game/script.rpy:1302
 translate spanish relojenlapared_ef1b7fe6:
 
     # "You feel uncomfortable with her good doggy comment but you still keep up."
-    ""
+    "Te incomodas con ese comentario de buen perrito pero aún así sigues."
 
