@@ -65,13 +65,13 @@ label before_main_menu:
 
     scene black with Pause(1)
 
-    show text "A story by Ramelden" at truecenter with dissolve
+    show text _("A story by Ramelden") at truecenter with dissolve
     with Pause(2)
 
     hide text with dissolve
     with Pause(1)
 
-    $ persistent.shown_warning = False 
+    
 
     if not persistent.shown_warning:
         
@@ -543,7 +543,7 @@ label lightbulbdemos:
     hide ssonriente
     hide strescuartos
     show skidding
-    s "Ok so the drill rings, right?"
+    s "Ok so the bell rings, right?"
     hide skidding
     show sgrin
     s "The play is about to start, and Marcel and I appear together."
@@ -1298,8 +1298,8 @@ label relojenlapared:
                             play sound "audio/coser.mp3"
                             scene fondoo
                             show ssonriente
-                            s "Yay! I knew you would say that! Good boy! Or girl"
-                            "You feel uncomfortable with her good boy comment but you still keep up."
+                            s "Yay! I knew you would say that! Good doggy!"
+                            "You feel uncomfortable with her good doggy comment but you still keep up."
                             y "Can I still ask you about your dressing room?"
                             hide ssonriente
                             show soh
