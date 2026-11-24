@@ -103,6 +103,7 @@ define c = DynamicCharacter("chicas", who_color = 'ffffff', what_color = '3E424B
 image fuegomovil = Movie(size=(2800,1100), channel = "movie", play = "images/fueguito.webm")
 image reina = Movie(size=(1920,1080), channel = "movie", play = "images/reina.webm")
 image sangre = Movie(size=(1920,1080), channel = "movie", play = "images/sangre.webm")
+image video_final = Movie(play="images/last.webm", size=(1920, 1080))
 
 # The game starts here.
 
@@ -289,6 +290,7 @@ label start:
     return
 
 label menupreguntasprincipales:
+    scene fondoo
     hide sseria
     hide strescuartos
     hide smikan
@@ -524,7 +526,7 @@ label menupreguntasprincipales1:
 
 
 label lightbulb:
-    
+    $reloj_desbloqueado = True
     hide snerviosa
     hide sseria
     show ssonriente
@@ -946,7 +948,7 @@ label lightbulbdemos:
                                             play audio "audio/reina.mp3"
                                             
                                             play movie "images/reina.webm"
-                                            $ renpy.pause(5, hard=True)
+                                            $renpy.pause(5, hard=True)
                                             pause 5
 
                                             $renpy.pause(2)
@@ -1692,6 +1694,13 @@ label renemy:
     s "{sc=5}I can't stand you anymore...{/sc}"
     s "{sc=5}And you are telling me this right when I am going on stage in some time...{/sc}"
     s "{sc=5}{size=*3}YOU ARE DISGUSTING.{/size}{/sc}"
+    stop music
+    $config.allow_skipping=False
+    $renpy.block_rollback()
+    call screen vidbloq
+    
+    $Quit(confirm=False)()
+    
 
 
 

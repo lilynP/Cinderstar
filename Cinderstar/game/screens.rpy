@@ -1755,3 +1755,8 @@ screen content_warning():
                     hover_background Frame("gui/button/choice_hover_background.png", 20,20)
                     padding(40,20)
                     action Quit(confirm=False)
+
+screen vidbloq():
+    modal True
+    add "video_final"
+    timer 52.1 action Return()
