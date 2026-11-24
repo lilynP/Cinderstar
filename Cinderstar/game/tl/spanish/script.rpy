@@ -127,10 +127,13 @@ translate spanish start_bd1bfc8e:
     y "¿Por qué estoy aquí?"
 
 # game/script.rpy:168
-translate spanish start_b381b924:
+translate spanish strings:
+    old "You have been selected for the code 45590-bqn mission"
+    new "Te hemos escogido para la misión de código 45590-bqn"
 
-    # v "You have been selected for the code 45590-bqn mission"
-    v "Te hemos escogido para la misión de código 45580-bqn"
+    
+translate spanish bell_rings:
+    s "Ok, entonces suena la campana, ¿verdad?"
 
 # game/script.rpy:169
 translate spanish start_9b43100f:
@@ -238,7 +241,7 @@ translate spanish start_2da771f0:
 translate spanish start_1d24cef7:
 
     # "You don't get why he said something about being comfortable but you just go with it"
-    "No te quepa en la cabeza por qué él diría algo sobre estar acomodado pero simplemente vas con ello."
+    "No entiendes por qué él dijo algo sobre estar cómoda, pero simplemente sigues la corriente."
 
 # game/script.rpy:205
 translate spanish start_122b1c46:
@@ -376,7 +379,7 @@ translate spanish start_b09ee3d5:
 translate spanish start_3031cfac:
 
     # n "This is me helping you and saving your dumb ahh to not ruin your mission."
-    n "Este soy yo tratando de ayudarte a salvar tu estupidez para no arruinar tu misión."
+    n "Soy yo ayudándote y salvando tu estúpido trasero para que no arruines tu misión."
 
 # game/script.rpy:253
 translate spanish start_f2a63f00:
@@ -472,7 +475,7 @@ translate spanish askdrawers_290c57c0:
 translate spanish drawers_32c8c341:
 
     # s "That is, I must say, a creepy question indeed..."
-    s "Esa es, debo decir, una pregunta inquietante en efecto..."
+    s "Esa es, debo admitir, una pregunta bastante inquietante..."
 
 # game/script.rpy:339
 translate spanish mybad_27aa61cb:
@@ -652,7 +655,7 @@ translate spanish menupreguntasprincipales1_9c872221:
 translate spanish menupreguntasprincipales1_6110d5a7:
 
     # s "They were commissioned by Marcel after we prepared for an audition"
-    s "Fueron comisionados por Marcel despúes de prepararnos para una audición"
+    s "Fueron comisionados por Marcel después de prepararnos para una audición"
 
 # game/script.rpy:431
 translate spanish menupreguntasprincipales1_53712220:
@@ -748,7 +751,7 @@ translate spanish menupreguntasprincipales1_3c6df6d1:
 translate spanish menupreguntasprincipales1_d770f5fd:
 
     # y "I swear I am! I am sorry!"
-    y "¡Te lo juro que sí lo soy! ¡Pérdoname!"
+    y "¡Te lo juro que sí lo soy! ¡Perdóname!"
 
 # game/script.rpy:475
 translate spanish menupreguntasprincipales1_602fac5e:
@@ -838,7 +841,7 @@ translate spanish menupreguntasprincipales1_854426b6:
 translate spanish menupreguntasprincipales1_ad1c2680:
 
     # n "Your interview will be LAMEEEE as hell right now LMAO"
-    n "Tu entrevista será una PORQUERÍA TOTAL ahora JAJAJA "
+    n "Tu entrevista será una PORQUERÍA TOTAL a partir de ahora JAJAJA "
 
 # game/script.rpy:514
 translate spanish menupreguntasprincipales1_26af22aa:
@@ -850,7 +853,7 @@ translate spanish menupreguntasprincipales1_26af22aa:
 translate spanish menupreguntasprincipales1_c451b41b:
 
     # n "That 2 second pause was her being uncomfortable with a presence that is SUPPOSED to make her comfortable with fun questions."
-    n "Esa pausa de 2 segundos es ella estando incómoda con una presencia que se supone que debe darle comodidad con preguntas cool."
+    n "Esa pausa de 2 segundos es ella sintiéndose incómoda con una presencia que se supone que debe darle comodidad con preguntas cool."
 
 # game/script.rpy:519
 translate spanish menupreguntasprincipales1_87038562:
@@ -882,11 +885,9 @@ translate spanish lightbulb_83446366:
     # s "What do you mean '...Ok?' I will tell you about it anyways."
     s "¿Cómo que '...Ok?'? Te lo diré de todos modos."
 
-# game/script.rpy:546
-translate spanish lightbulbdemos_c0f6dfbe:
 
-    # s "Ok so the drill rings, right?"
-    s "Ok, pues suena la campana, ¿no?"
+
+
 
 # game/script.rpy:549
 translate spanish lightbulbdemos_51f4c4ab:
@@ -898,7 +899,7 @@ translate spanish lightbulbdemos_51f4c4ab:
 translate spanish lightbulbdemos_e4f38b54:
 
     # s "The set is a half empty house with a clock on the wall, that doesn't tick by the way,"
-    s "El set es una casa media vacía con un reloj en la pared, que no funciona por cierto,"
+    s "El set es una casa medio vacía con un reloj en la pared, que no funciona por cierto,"
 
 # game/script.rpy:553
 translate spanish lightbulbdemos_79335ff6:
@@ -1642,7 +1643,7 @@ translate spanish lightbulbdemos_1a9d4f14:
 translate spanish lightbulbdemos_3e2f49f0:
 
     # s "I yell at him again saying that I don't even have eyelashes, that these are drawn..."
-    s "Le grito ed nuevo diciendo que no tengo pestañas, que estas son dibujadas..."
+    s "Le grito de nuevo diciendo que no tengo pestañas, que estas son dibujadas..."
 
 # game/script.rpy:844
 translate spanish lightbulbdemos_c7ba7c9a:
@@ -2560,7 +2561,7 @@ translate spanish relojenlapared_514ee9ff:
 translate spanish relojenlapared_cdbb8e3b:
 
     # c "Do you even know what you just achieved?"
-    c "¿Acaso tienes idea de lo que acabas de lograr?"
+    c "¿Tienes idea de lo que acabas de lograr?"
 
 # game/script.rpy:1242
 translate spanish relojenlapared_42b2e6db:
@@ -2830,7 +2831,7 @@ translate spanish relojenlapared_3528571e:
 translate spanish relojenlapared_829496bc:
 
     # y "I-I am, I just use a sand timer! This one!"
-    y "L-Lo soy, !Solo que uso un reloj de arena!"
+    y "L-Lo soy, ¡Solo que uso un reloj de arena!"
 
 # game/script.rpy:1342
 translate spanish relojenlapared_3b179c46:
@@ -2974,7 +2975,7 @@ translate spanish relojenlapared_af05c72d:
 translate spanish relojenlapared_0c954248:
 
     # s "Because they make me look beautiful and not like some mess without 'mascara'."
-    s "Porque me hacen ver hermosa y no cualquier desastre sin 'rimel'."
+    s "Porque me hacen ver hermosa y no cualquier desastre sin 'rímel'."
 
 # game/script.rpy:1386
 translate spanish relojenlapared_2ec6ef92:
@@ -4265,4 +4266,62 @@ translate spanish python:
     gui.name_text_font = "fonts/Por Siempre Gótica.ttf"
     gui.interface_text_font = "fonts/Por Siempre Gótica.ttf"
     gui.text_size = 33
+    gui.choice_button_text_font = "fonts/alagard-12px-unicode.otf"
+    gui.button_text_font = "fonts/alagard-12px-unicode.otf"
+
+# TODO: Translation updated at 2026-11-24 11:01
+
+# game/script.rpy:169
+translate spanish start_c7926399:
+
+    # v "You have been selected for mission 45590-bqn"
+    v ""
+
+# game/script.rpy:236
+translate spanish start_6beea708:
+
+    # "His voice resonates in your mind like a church bell"
+    "Su voz resuena en tu mente como una campana de iglesia."
+
+# game/script.rpy:520
+translate spanish menupreguntasprincipales1_2f9e12e4:
+
+    # n "That 2-second pause was her being uncomfortable with a presence that is SUPPOSED to make her comfortable with fun questions."
+    n "Esa pausa de 2 segundos era ella estando incómoda con una presencia que debería mantenerla cómoda con preguntas cool."
+
+# game/script.rpy:548
+translate spanish lightbulbdemos_eef8dcde:
+
+    # s "Ok so the bell rings, right?"
+    s ""
+
+# game/script.rpy:1080
+translate spanish relojenlapared_51302c6a:
+
+    # y "Yeah so tell me, why are all of the numbers 11s?"
+    y "Sí, entonces dime, por qué todos los números son onces?"
+
+# game/script.rpy:1497
+translate spanish resumen_a8fd9799:
+
+    # n "As I mentioned before, did you notice that she mentioned Jhonnas Craige?"
+    n "Como mencioné antes, notaste que ella mencionó a Jhonnas Craige?"
+
+# game/script.rpy:1547
+translate spanish resumen_bb425602:
+
+    # n "And yeah, who is 'father'? If he was a doctor, whatever he is, he must have been a good one."
+    n "Y sí, ¿quién es 'padre'? Si fuese un doctor, lo que sea que sea él, sería o habría sido uno bueno."
+
+# game/script.rpy:1550
+translate spanish resumen_bc7ff25c:
+
+    # n "If he was from the other ground he must have been an assassin."
+    n "Si fuese del otro terreno sería un asesino."
+
+translate spanish strings:
+
+    # game/script.rpy:884
+    old "That was another joke, right? Sorry, just keep going..."
+    new "Ese fue otro chiste, ¿no? Disculpa, tan solo sigue..."
 

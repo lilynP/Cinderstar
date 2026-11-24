@@ -166,7 +166,7 @@ label start:
     y "Why am I here?"
     hide vladan2
     show vladan3
-    v "You have been selected for mission 45590-bqn"
+    v "You have been selected for the code 45590-bqn mission"
     v "You OUGHT to finish it"
     hide vladan3
     show vladan2
@@ -327,12 +327,12 @@ label drawers:
     s "That is, I must say, a creepy question indeed..."
     menu:
         "Return and ask something more normal":
-            call mybad
+            call mybad from _call_mybad
                     
             jump menupreguntasprincipales
                     
         "Continue being a creep":
-            call creep
+            call creep from _call_creep
 
 
 label mybad:
@@ -404,18 +404,18 @@ label creep:
                     play sound "audio/puerta.wav"
                     n "You already ruined it all."
                     n "Don't bother going up to him again"
-                    $renpy.full_restart()
+                    $Quit(confirm=False)()
 
                 "You know, you're right, my bad":
                     hide smolestadaminimamente
                     
-                    call mybad
+                    call mybad from _call_mybad_1
 
         
         "You know, you're right, my bad.":
             stop music
             play music "audio/normalmusic.mp3"
-            call mybad
+            call mybad from _call_mybad_2
             jump menupreguntasprincipales
     return
 
@@ -545,7 +545,7 @@ label lightbulbdemos:
     hide ssonriente
     hide strescuartos
     show skidding
-    s "Ok so the bell rings, right?"
+    s "Ok so the bell rings, right?" id bell_rings
     hide skidding
     show sgrin
     s "The play is about to start, and Marcel and I appear together."
@@ -955,7 +955,7 @@ label lightbulbdemos:
                                             $renpy.block_rollback()
                                             n "Oopsie"
                                             
-                                            $renpy.full_restart()
+                                            $Quit(confirm=False)()
 
 
                                         "I'm just kidding with you ma'am, it's just, you know? I am a little different.":
@@ -1023,7 +1023,7 @@ label lightbulbdemos:
                                     hide sincomoda
                                     show smikan
                                     play sound "audio/correct.wav" volume 0.5
-                                    s "That sound beautiful"
+                                    s "That sounds beautiful"
                                     y "Mhm!...So...Keeping up with the stuff in your dressing room..."
                                     stop music fadeout 1.0
                                     play music "audio/normalmusic.mp3" fadein 1.0
@@ -1292,7 +1292,7 @@ label relojenlapared:
                             play movie "images/slimeo.webm"
                             
                             $renpy.pause(14)
-                            $renpy.full_restart()
+                            $Quit(confirm=False)()
                         "{sc=5}Yes! You do look good.{/sc}":
                             scene fondonegro
                             stop music
