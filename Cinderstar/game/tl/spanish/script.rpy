@@ -4036,7 +4036,7 @@ translate spanish renemy_d496ab52:
 translate spanish renemy_c507a72d:
 
     # s "{sc=5}And you are telling me this right when I am going on stage in some time...{/sc}"
-    s "{sc=5}Y encima de todo me lo dices cuando voy a tener una actuación en unos momentos...{/sc}"
+    s "{sc=5}Y encima de todo me lo dices cuando voy a tener una actuación en \nunos momentos...{/sc}"
 
 # game/script.rpy:1693
 translate spanish renemy_adedab8e:
@@ -4259,4 +4259,10 @@ translate spanish relojenlapared_ef1b7fe6:
 
     # "You feel uncomfortable with her good doggy comment but you still keep up."
     "Te incomodas con ese comentario de buen perrito pero aún así sigues."
+
+translate spanish python:
+    gui.text_font = "fonts/alagard-12px-unicode.otf"
+    gui.name_text_font = "fonts/Por Siempre Gótica.ttf"
+    gui.interface_text_font = "fonts/Por Siempre Gótica.ttf"
+    gui.text_size = 33
 
